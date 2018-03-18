@@ -1,0 +1,13 @@
+{
+	"google": {
+		"id": "",
+		"filename": ""
+	},
+	"favicon": {
+		"filename": ""
+	},
+	"deploy": {
+		"host": "",
+		"path": ""
+	}
+}

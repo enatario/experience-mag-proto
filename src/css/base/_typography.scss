@@ -1,0 +1,13 @@
+body {
+  line-height: $line-height-base;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+}
+
+p {
+  margin: 0;
+}
+
+strong {
+  font-weight: $font-weight-bold;
+}

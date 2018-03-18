@@ -1,0 +1,44 @@
+// Bourbon settings
+$bourbon: (
+  "global-font-file-formats": ("woff2", "woff"),
+);
+
+// Directories
+$dir-font: "assets/fonts/";
+$dir-image: "assets/images/";
+
+// Breakpoints
+$breakpoints: (
+  x-small: 25em,
+  small: 35em,
+  medium: 55em,
+  large: 65em
+);
+
+// Font stacks
+$font-family-base: $font-stack-system;
+
+// Font weights
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+// Line heights
+$line-height-base: 1.5;
+$line-height-tight: 1;
+
+// Font sizes
+$font-size-global: 16px;
+$font-size-xx-small: rem(10px);
+$font-size-x-small: rem(12px);
+$font-size-small: rem(14px);
+$font-size-base: rem($font-size-global);
+$font-size-medium: rem(20px);
+$font-size-large: rem(28px); 
+
+
+// Borders
+$border-radius-base: 3px;
+$border-radius-circle: 50%;
+
+// Transitions
+$transition-base: 0.2s ease-in-out all;
