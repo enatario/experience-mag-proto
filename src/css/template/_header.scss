@@ -1,12 +1,13 @@
 .site-header {
+  @include position(absolute, 0 0 null 0);
+
+  align-items: center;
   display: flex;
   padding: $spacing-base;
   justify-content: space-between;
 }
 
 .site-header__logo {
-  align-self: center;
-
   svg {
     height: $spacing-large;
   }
