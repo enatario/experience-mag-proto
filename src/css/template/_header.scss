@@ -1,0 +1,30 @@
+.site-header {
+  display: flex;
+  padding: $spacing-base;
+  justify-content: space-between;
+}
+
+.site-header__logo {
+  align-self: center;
+
+  svg {
+    height: $spacing-large;
+  }
+}
+
+.skip-to-main {
+  @include hide-visually;
+
+  &:focus {
+    @include hide-visually("unhide");
+    @include position(absolute, $spacing-base null null 50%);
+
+    background-color: $bg-color-accent;
+    color: $text-color-inverse;
+    font-family: $font-family-sans;
+    font-weight: $font-weight-bold;
+    padding: $spacing-small;
+    transform: translate(-50%);
+    z-index: get-z-index("ceiling");
+  }
+}

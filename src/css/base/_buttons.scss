@@ -1,4 +1,16 @@
 button {
   cursor: pointer;
-  padding: 0;
+  font-family: $font-family-sans;
+  font-weight: $font-weight-bold;
+}
+
+.btn--primary {
+  box-shadow: 0 0 0 1px $bg-color-accent;
+  border: 0;
+  padding: $spacing-small;
+  transition: $transition-base;
+
+  &:hover {
+    box-shadow: 5px 5px 0 0 $bg-color-accent;
+  }
 }

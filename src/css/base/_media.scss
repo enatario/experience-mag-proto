@@ -1,0 +1,21 @@
+img,
+video {
+  display: block;
+  width: 100%;
+}
+
+svg {
+  display: block;
+
+  @media screen and (-ms-high-contrast: active) {
+    fill: #0074d9;
+  }
+
+  @media screen and (-ms-high-contrast: black-on-white) {
+    fill: #333333;
+  }
+
+  @media screen and (-ms-high-contrast: white-on-black) {
+    fill: #efefef;
+  }
+}
