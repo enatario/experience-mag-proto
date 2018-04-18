@@ -1,5 +1,7 @@
 body {
   background-color: $color-offwhite;
+  font-family: $font-family-base;
+  line-height: $line-height-base;
   padding: $spacing-small;
 
   &::after {
