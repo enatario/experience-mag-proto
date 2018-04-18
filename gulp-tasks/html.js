@@ -19,6 +19,7 @@ gulp.task('html-dev', () => {
 		.helpers('./src/html/helpers/*.js')
 		.data('./src/data/**/*.{js,json}')
 		.data({timestamp: Date.now()})
+		.data({directory: process.cwd()})
 
 	return gulp.src(srcIndex)
 		.pipe(plumber({ errorHandler: report}))

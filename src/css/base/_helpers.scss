@@ -20,6 +20,11 @@
   }
 }
 
+// Z-indexes
+@function get-z-index($index) {
+  @return map-get($z-index, $index);
+}
+
 @mixin x-y-centered($display: flex, $justify: center) {
   display: $display;
   align-items: center;

@@ -1,0 +1,12 @@
+body {
+  padding: $spacing-small;
+
+  &::after {
+    @include position(fixed, 0)
+
+    content: '';
+    display: block;
+    pointer-events: none;
+    box-shadow: inset 0 0 0 $spacing-small $bg-color-secondary;
+  }
+}

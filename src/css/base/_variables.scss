@@ -4,8 +4,8 @@ $bourbon: (
 );
 
 // Directories
-$dir-font: "assets/fonts/";
-$dir-image: "assets/images/";
+$dir-font: "/assets/fonts/";
+$dir-image: "/assets/images/";
 
 // Breakpoints
 $breakpoints: (
@@ -35,6 +35,30 @@ $font-size-base: rem($font-size-global);
 $font-size-medium: rem(20px);
 $font-size-large: rem(28px); 
 
+// Spacing
+$spacing-base: 1rem;
+$spacing-x-small: $spacing-base / 4;
+$spacing-small: $spacing-base / 2;
+$spacing-medium: $spacing-base * 1.5;
+$spacing-large: $spacing-base * 2;
+$spacing-x-large: $spacing-base * 2.5;
+$spacing-xx-large: $spacing-base * 6;
+
+// Colors
+$color-offblack: #333333;
+$color-gray: #5c5c5c;
+$color-offwhite: #efefef;
+$color-beige: #f3f2ee;
+$color-beige-dark: #d5d2c4;
+$color-poppy: #e05b43;
+
+$text-color-base: $color-offblack;
+$text-color-inverse: $color-offwhite;
+$text-color-accent: $color-poppy;
+
+$bg-color-base: $color-offwhite;
+$bg-color-secondary: $color-beige;
+$bg-color-accent: $color-poppy;
 
 // Borders
 $border-radius-base: 3px;
@@ -42,3 +66,15 @@ $border-radius-circle: 50%;
 
 // Transitions
 $transition-base: 0.2s ease-in-out all;
+
+// Z-Index
+$z-index: (
+  basement: -999999,
+  layout: 1000,
+  object: 2000,
+  component: 3000,
+  subcomponent: 3010,
+  modal: 4000,
+  submodal: 4010,
+  ceiling: 999999,
+);

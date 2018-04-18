@@ -11,3 +11,7 @@ p {
 strong {
   font-weight: $font-weight-bold;
 }
+
+abbr[title] {
+  text-decoration: none;
+}
