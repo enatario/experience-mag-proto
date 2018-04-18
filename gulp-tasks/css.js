@@ -11,15 +11,20 @@ const sassLint = require('gulp-sass-lint')
 
 const srcCSS = 'src/css/config.scss'
 
+// Linter
+gulp.task('css-lint', () => {
+	gulp.src("src/css/**/*.scss")
+		.pipe(sassLint({
+				configFile: ".sass-lint.yml",
+			}))
+	  .pipe(sassLint.format())
+	  .pipe(sassLint.failOnError())
+})
+
 //compile styl to css and autoprefix
-gulp.task('css-dev', () => {
+gulp.task('css-dev', ["css-lint"], () => {
 	gulp.src(srcCSS)
 		.pipe(plumber({ errorHandler: report }))
-		.pipe(sassLint({
-			configFile: '.sass-lint.yml'
-		}))
-    	.pipe(sassLint.format())
-    	.pipe(sassLint.failOnError())
 		.pipe(sass({
 			sourcemaps: true,
 			includePaths: [bourbon, "node_modules"]

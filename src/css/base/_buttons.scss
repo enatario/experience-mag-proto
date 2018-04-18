@@ -5,8 +5,8 @@ button {
 }
 
 .btn--primary {
-  box-shadow: 0 0 0 1px $bg-color-accent;
   border: 0;
+  box-shadow: 0 0 0 1px $bg-color-accent;
   padding: $spacing-small;
   transition: $transition-base;
 

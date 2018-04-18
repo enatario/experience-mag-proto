@@ -22,9 +22,9 @@
   &::before {
     @include size($spacing-small);
 
-    content: "";
     border: 1px solid $bg-color-accent;
     border-radius: 50%;
+    content: "";
     margin-right: $spacing-small;
     transition: $transition-base;
   }

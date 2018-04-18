@@ -9,3 +9,15 @@
   font-style: normal;
   font-weight: 700;
 }
+
+@include font-face("Grifo", $dir-font + "Grifo-Regular") {
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@include font-face("Grifo", $dir-font + "Grifo-Bold") {
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+}

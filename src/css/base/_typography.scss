@@ -1,7 +1,8 @@
 body {
-  line-height: $line-height-base;
   font-family: $font-family-base;
   font-size: $font-size-base;
+  font-smoothing: antialiased;
+  line-height: $line-height-base;
 }
 
 p {
@@ -12,6 +13,81 @@ strong {
   font-weight: $font-weight-bold;
 }
 
-abbr[title] {
+abbr {
+  &[title] {
+    text-decoration: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family-display;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+  margin: 0;
+}
+
+h1,
+h2, {
+  font-size: $font-size-large;
+
+  @include breakpoint("medium") {
+    font-size: $font-size-x-large;
+  }
+}
+
+h3 {
+  font-size: $font-size-medium;
+
+  @include breakpoint("medium") {
+    font-size: $font-size-large;
+  }
+}
+
+h4,
+h5,
+h6 {
+  font-size: $font-size-base-plus;
+}
+
+address {
+  font-style: normal;
+  font-family: $font-family-sans;
+  font-size: $font-size-small;
+  font-weight: $font-weight-bold;
+}
+
+a {
+  color: $text-color-base;
   text-decoration: none;
+  transition: $transition-base;
+
+  &:hover {
+    color: $text-color-accent;
+  }
+
+  p &,
+  address & {
+    color: $text-color-accent;
+    display: inline;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.overline {
+  background-color: $bg-color-accent;
+  color: $text-color-inverse;
+  display: inline-block;
+  font-family: $font-family-sans;
+  font-size: $font-size-xx-small;
+  letter-spacing: 2px;
+  padding: $spacing-small;
+  text-transform: uppercase;
 }

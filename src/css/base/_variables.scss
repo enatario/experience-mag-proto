@@ -10,14 +10,14 @@ $dir-image: "/assets/images/";
 // Breakpoints
 $breakpoints: (
   x-small: 25em,
-  small: 35em,
+  small: 40em,
   medium: 55em,
   large: 65em
 );
 
 // Font stacks
 $font-family-base: $font-stack-georgia;
-$font-family-display: $font-family-base;
+$font-family-display: "Grifo", $font-family-base;
 $font-family-sans: "Moderat", $font-stack-system;
 
 // Font weights
@@ -34,8 +34,10 @@ $font-size-xx-small: rem(10px);
 $font-size-x-small: rem(12px);
 $font-size-small: rem(14px);
 $font-size-base: rem($font-size-global);
-$font-size-medium: rem(20px);
-$font-size-large: rem(28px); 
+$font-size-base-plus: rem(20px);
+$font-size-medium: rem(28px);
+$font-size-large: rem(36px);
+$font-size-x-large: rem(48px);
 
 // Spacing
 $spacing-base: 1rem;
@@ -46,8 +48,13 @@ $spacing-large: $spacing-base * 2;
 $spacing-x-large: $spacing-base * 2.5;
 $spacing-xx-large: $spacing-base * 6;
 
+// Widths
+$width-large: 80rem;
+$width-medium: 60rem;
+$width-base: 35rem;
+
 // Colors
-$color-offblack: #333333;
+$color-offblack: #333;
 $color-gray: #5c5c5c;
 $color-offwhite: #fdfdfc;
 $color-beige: #f3f2ee;

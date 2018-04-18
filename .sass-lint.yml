@@ -68,6 +68,7 @@ rules:
     - 1
     - extra-properties:
         - font-display
+        - font-smoothing
         - text-decoration-skip
   no-qualifying-elements:
     - 1
@@ -77,7 +78,7 @@ rules:
   no-trailing-zero: 1
   no-transition-all: 1
   no-url-protocols: 1
-  no-vendor-prefixes: 1
+  no-vendor-prefixes: 0
   placeholder-in-extend: 0
   placeholder-name-format: 0
   property-sort-order:

@@ -1,0 +1,138 @@
+.tz {
+  display: flex;
+  flex-direction: column;
+
+  figure,
+  picture,
+  img {
+    height: 100%;
+  }
+
+  img {
+    object-fit: cover;
+  }
+
+  @include breakpoint("medium") {
+
+    .tz__content {
+      order: 2;
+    }
+
+    .tz__media {
+      order: 1;
+    }
+  }
+}
+
+.tz__content {
+  > * {
+    &:not(:last-child) {
+      margin-bottom: $spacing-base;
+    }
+  }
+}
+
+.tz__link {
+  display: block;
+
+  &:hover {
+
+    .tz__img {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.tz__img,
+.tz__figure {
+  transition: $transition-base;
+}
+
+.tz__figure {
+  overflow: hidden;
+}
+
+.tz__content {
+  padding: $spacing-large;
+}
+
+.featured {
+  background-image: linear-gradient(to bottom, $bg-color-secondary 30%, $bg-color-secondary 30%, transparent 30%);
+  padding: $spacing-base;
+
+  > * {
+    margin-bottom: 5rem !important;
+  }
+}
+
+// Tease Hierarchy
+
+// Featured
+.tz--featured {
+  background-color: $bg-color-base;
+  box-shadow: $spacing-base $spacing-base 0 0 $bg-color-tertiary;
+  margin: 0 auto;
+  max-width: $width-large;
+  min-height: 50vh;
+
+  @include breakpoint("medium") {
+    flex-direction: row;
+    min-height: 80vh;
+  }
+
+  .tz__content {
+    margin: 0 auto;
+    max-width: $width-base;
+  }
+}
+
+// Mid-size
+.tz--mid {
+  background-color: $bg-color-secondary;
+  max-width: $width-medium;
+  margin: 0 auto;
+  padding-bottom: $spacing-large;
+
+  .tz__media {
+    padding: 0 2rem;
+    margin: 0 auto;
+  }
+
+  .tz__content {
+    margin: 0 auto;
+    max-width: $width-base;
+  }
+
+  @include breakpoint("medium") {
+    flex-direction: row;
+    padding: 0;
+
+    .tz__media {
+      padding: 0;
+    }
+
+    .tz__content {
+      max-width: 100%;
+    }
+  }
+}
+
+// Tease List
+.tz__list {
+  border-bottom: 10px solid $bg-color-secondary;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+
+  .tz__item {
+    padding: $spacing-small;
+
+    &:not(:last-child) {
+      border-right: 1px solid $bg-color-tertiary;
+    }
+  }
+
+  .tz__content {
+    padding: 1rem 0 0;
+  }
+}

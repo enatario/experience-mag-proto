@@ -1,6 +1,9 @@
+figure,
 img,
+picture,
 video {
   display: block;
+  margin: 0;
   width: 100%;
 }
 
@@ -8,14 +11,15 @@ svg {
   display: block;
 
   @media screen and (-ms-high-contrast: active) {
-    fill: #0074d9;
+    $_accessible-blue: #0074d9;
+    fill: $_accessible-blue;
   }
 
   @media screen and (-ms-high-contrast: black-on-white) {
-    fill: #333333;
+    fill: $color-offblack;
   }
 
   @media screen and (-ms-high-contrast: white-on-black) {
-    fill: #efefef;
+    fill: $color-offwhite;
   }
 }

@@ -26,7 +26,7 @@
 }
 
 @mixin x-y-centered($display: flex, $justify: center) {
-  display: $display;
   align-items: center;
+  display: $display;
   justify-content: $justify;
 }
