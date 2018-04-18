@@ -16,7 +16,9 @@ $breakpoints: (
 );
 
 // Font stacks
-$font-family-base: $font-stack-system;
+$font-family-base: $font-stack-georgia;
+$font-family-display: $font-family-base;
+$font-family-sans: "Moderat", $font-stack-system;
 
 // Font weights
 $font-weight-normal: 400;
@@ -47,10 +49,11 @@ $spacing-xx-large: $spacing-base * 6;
 // Colors
 $color-offblack: #333333;
 $color-gray: #5c5c5c;
-$color-offwhite: #efefef;
+$color-offwhite: #fdfdfc;
 $color-beige: #f3f2ee;
 $color-beige-dark: #d5d2c4;
-$color-poppy: #e05b43;
+// $color-poppy: #ff4d37;
+$color-poppy: #cf432a;
 
 $text-color-base: $color-offblack;
 $text-color-inverse: $color-offwhite;

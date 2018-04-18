@@ -1,0 +1,11 @@
+@include font-face("Moderat", $dir-font + "Moderat-Regular") {
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@include font-face("Moderat", $dir-font + "Moderat-Bold") {
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+}

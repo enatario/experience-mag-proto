@@ -11,7 +11,10 @@
 		
 	</head>
 	<body>
-		{{> @partial-block }}
+		{{> base/base-header }}
+		<main id="content">
+			{{> @partial-block }}
+		</main>
 		{{> base/base-js }}
 	</body>
 </html>
