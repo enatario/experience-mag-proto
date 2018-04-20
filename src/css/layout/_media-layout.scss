@@ -1,0 +1,27 @@
+// Media layouts
+.layout-multi {
+  @include breakpoint("medium") {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    > picture {
+      width: 49%;
+
+      &.layout-multi__large {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.layout-youtube {
+  padding-top: 56.25%;
+  position: relative;
+  width: 100%;
+
+  iframe {
+    @include position(absolute, 0);
+    @include size(100%);
+  }
+}

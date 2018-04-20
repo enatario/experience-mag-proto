@@ -1,0 +1,61 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 2rem auto;
+  padding: $spacing-base;
+}
+
+.hero--with-media {
+  figure,
+  picture,
+  img {
+    height: 100%;
+  }
+
+  img {
+    object-fit: cover;
+  }
+
+  .hero__content {
+    order: 2;
+  }
+
+  @include breakpoint("medium") {
+    flex-direction: row;
+    min-height: 90vh;
+
+    > * {
+      width: 50%;
+    }
+  }
+}
+
+.hero__content {
+  @include x-y-centered;
+
+  background-color: $bg-color-base;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: $width-large;
+  padding: $spacing-base;
+
+  @include breakpoint("medium") {
+    background-image: linear-gradient($bg-color-secondary ,$bg-color-secondary);
+    background-position: 50% 5%;
+    background-repeat: no-repeat;
+    background-size: 3px $spacing-xx-large;
+
+  }
+}
+
+.hero__inner {
+  max-width: $width-small;
+  margin: 0 auto;
+  text-align: center;
+
+  > * {
+    &:not(:last-child) {
+      margin-bottom: $spacing-base;
+    }
+  }
+}

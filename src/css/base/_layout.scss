@@ -13,11 +13,10 @@ body {
   height: 100%;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-}
-
 footer {
   margin-top: auto;
+}
+
+main {
+  padding: $spacing-base $spacing-large;
 }

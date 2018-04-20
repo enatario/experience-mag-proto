@@ -25,8 +25,8 @@
   @return map-get($z-index, $index);
 }
 
-@mixin x-y-centered($display: flex, $justify: center) {
-  align-items: center;
-  display: $display;
-  justify-content: $justify;
+@mixin x-y-centered($align: center) {
+  align-items: $align;
+  display: flex;
+  justify-content: center;
 }

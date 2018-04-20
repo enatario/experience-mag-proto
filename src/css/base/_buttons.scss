@@ -1,16 +1,59 @@
-button {
+%btn {
+  border: 0;
   cursor: pointer;
   font-family: $font-family-sans;
   font-weight: $font-weight-bold;
+  transition: $transition-base;
 }
 
 .btn--primary {
-  border: 0;
+  @extend %btn;
+
+  background-color: $bg-color-accent;
+  border: 1px solid transparent;
+  color: $text-color-inverse;
+  padding: $spacing-small $spacing-medium;
+
+  &:hover {
+    background-color: $bg-color-base;
+    border-color: $bg-color-accent;
+    box-shadow: 5px 5px 0 0 $bg-color-accent;
+    color: $text-color-base;
+  }
+}
+
+.btn--secondary {
+  @extend %btn;
+
   box-shadow: 0 0 0 1px $bg-color-accent;
   padding: $spacing-small;
-  transition: $transition-base;
 
   &:hover {
     box-shadow: 5px 5px 0 0 $bg-color-accent;
+  }
+}
+
+.btn--form {
+  @extend %btn;
+
+  background-color: $bg-color-accent;
+  color: $text-color-inverse;
+
+  &:hover {
+    background-color: $color-offblack;
+  }
+}
+
+.btn--tweet {
+
+  &:hover {
+    svg {
+      fill: $text-color-base;
+    }
+  }
+  svg {
+    height: 0.75rem;
+    fill: $bg-color-base;
+    transition: $transition-base;
   }
 }

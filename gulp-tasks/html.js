@@ -19,7 +19,6 @@ gulp.task('html-dev', () => {
 		.helpers('./src/html/helpers/*.js')
 		.data('./src/data/**/*.{js,json}')
 		.data({timestamp: Date.now()})
-		.data({directory: process.cwd()})
 
 	return gulp.src(srcIndex)
 		.pipe(plumber({ errorHandler: report}))
@@ -43,15 +42,29 @@ gulp.task('html-dev', () => {
 })
 
 gulp.task('html-prod', () => {
-	const hbStream = hb()
-		.partials('./src/html/partials/**/*.hbs')
-		.helpers('./src/html/helpers/*.js')
-		.data('./src/data/**/*.{js,json}')
-		.data({timestamp: Date.now()})
+  const hbStream = hb()
+    .partials('./src/html/partials/**/*.hbs')
+    .helpers('./src/html/helpers/*.js')
+    .data('./src/data/**/*.{js,json}')
+    .data({timestamp: Date.now()})
 
-	return gulp.src(srcIndex)
-		.pipe(hbStream)
-		.pipe(include({ basepath: svgPath }))
-		.pipe(rename('index.html'))
-		.pipe(gulp.dest('.tmp'))
+  return gulp.src(srcIndex)
+    .pipe(plumber({ errorHandler: report}))
+    .pipe(hbStream)
+    .pipe(include({ basepath: svgPath }))
+    .pipe(foreach(function(stream, file){
+      const filename = path.basename(file.path, '.hbs')
+      const isIndex = filename === 'index'
+        return stream
+          .pipe(cond(isIndex,
+            rename({ extname: '.html' }),
+              rename({ 
+                dirname: filename + "/",
+                basename: "index",
+                extname: '.html'
+              }),
+          ))
+          .pipe(gulp.dest('dist/prod'))
+      }))
 })
+

@@ -41,7 +41,7 @@
     "picturefill": "^3.0.2",
     "promis": "1.1.4",
     "request": "2.72.0",
-    "require-dir": "0.3.0",
+    "require-dir": "^1.0.0",
     "run-sequence": "1.2.1",
     "shelljs": "0.7.0",
     "webpack": "1.13.1",

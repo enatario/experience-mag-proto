@@ -25,6 +25,7 @@
     border: 1px solid $bg-color-accent;
     border-radius: 50%;
     content: "";
+    display: block;
     margin-right: $spacing-small;
     transition: $transition-base;
   }

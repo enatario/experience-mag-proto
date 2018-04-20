@@ -1,0 +1,42 @@
+.newsletter {
+  background-color: $bg-color-secondary;
+  padding: $spacing-base;
+}
+
+.newsletter__title {
+  font-family: $font-family-display;
+  font-size: $font-size-medium;
+  font-weight: $font-weight-bold;
+}
+
+.newsletter__form {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @include breakpoint("medium") {
+    flex-direction: row;
+  }
+
+  label {
+    width: 100%;
+
+    @include breakpoint("medium") {
+      width: 70%;
+    }
+  }
+
+  input {
+    margin-top: $spacing-small;
+  }
+
+  button {
+    width: 100%;
+    height: $spacing-base * 3;
+
+    @include breakpoint("medium") {
+      width: 30%;
+    }
+  }
+}

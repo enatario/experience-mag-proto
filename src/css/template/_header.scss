@@ -1,14 +1,18 @@
 .site-header {
+  display: flex;
   align-items: center;
   background-color: $bg-color-secondary;
-  display: flex;
   justify-content: space-between;
-  padding: $spacing-large;
+  padding: $spacing-small $spacing-large;
+  position: fixed;
+  z-index: get-z-index("ceiling");
+  width: 100%;
 }
 
 .site-header__logo {
   svg {
-    height: $spacing-large;
+    display: block;
+    height: $spacing-medium;
   }
 }
 

@@ -9,5 +9,11 @@
 @import "template/header";
 @import "template/nav";
 
+// Layout
+@import "layout/article";
+@import "layout/media-layout";
+
 // Components
+@import "components/hero";
+@import "components/newsletter";
 @import "components/teases";

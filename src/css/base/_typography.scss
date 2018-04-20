@@ -1,7 +1,7 @@
 body {
   font-family: $font-family-base;
   font-size: $font-size-base;
-  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
   line-height: $line-height-base;
 }
 
@@ -25,7 +25,6 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $font-family-display;
   font-weight: $font-weight-bold;
   line-height: $line-height-tight;
   margin: 0;
@@ -33,6 +32,7 @@ h6 {
 
 h1,
 h2, {
+  font-family: $font-family-display;
   font-size: $font-size-large;
 
   @include breakpoint("medium") {
@@ -41,6 +41,7 @@ h2, {
 }
 
 h3 {
+  font-family: $font-family-display;
   font-size: $font-size-medium;
 
   @include breakpoint("medium") {
@@ -51,6 +52,7 @@ h3 {
 h4,
 h5,
 h6 {
+  font-family: $font-family-sans;
   font-size: $font-size-base-plus;
 }
 
@@ -81,12 +83,72 @@ a {
   }
 }
 
+figcaption {
+  font-family: $font-family-sans;
+  font-size: $font-size-small;
+}
+
+blockquote {
+  margin: $spacing-large auto;
+  text-align: center;
+  max-width: $width-small;
+
+  > * {
+    margin-bottom: $spacing-base;
+  }
+
+  &:before, &:after {
+    content: "";
+    display: block;
+    width: $spacing-large;
+    margin: $spacing-base auto;
+  }
+
+  &:before {
+    border-bottom: 2px solid $bg-color-tertiary;
+  }
+
+  &:after {
+    border-top: 2px solid $bg-color-tertiary;
+  }
+}
+
+.bq--feature {
+  p {
+    font-family: $font-family-display;
+    font-size: $font-size-medium;
+  }
+}
+
+.bq--sm {
+  background-color: $bg-color-base;
+
+  p {
+    font-style: italic;
+    margin-bottom: $spacing-base;
+  }
+}
+
+.crosshed {
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
+
+  &::after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid $bg-color-tertiary;
+    width: 3rem;
+    margin-top: 1rem;
+  }
+}
+
 .overline {
   background-color: $bg-color-accent;
   color: $text-color-inverse;
   display: inline-block;
   font-family: $font-family-sans;
   font-size: $font-size-xx-small;
+  font-weight: $font-weight-bold;
   letter-spacing: 2px;
   padding: $spacing-small;
   text-transform: uppercase;

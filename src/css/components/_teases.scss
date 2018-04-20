@@ -11,17 +11,6 @@
   img {
     object-fit: cover;
   }
-
-  @include breakpoint("medium") {
-
-    .tz__content {
-      order: 2;
-    }
-
-    .tz__media {
-      order: 1;
-    }
-  }
 }
 
 .tz__content {
@@ -32,11 +21,14 @@
   }
 }
 
+.tz__content {
+  order: 2;
+}
+
 .tz__link {
   display: block;
 
   &:hover {
-
     .tz__img {
       transform: scale(1.1);
     }
@@ -52,27 +44,21 @@
   overflow: hidden;
 }
 
-.tz__content {
-  padding: $spacing-large;
-}
-
 .featured {
-  background-image: linear-gradient(to bottom, $bg-color-secondary 30%, $bg-color-secondary 30%, transparent 30%);
-  padding: $spacing-base;
-
   > * {
     margin-bottom: 5rem !important;
   }
 }
 
+// ------------------
 // Tease Hierarchy
+// ------------------
 
 // Featured
 .tz--featured {
   background-color: $bg-color-base;
-  box-shadow: $spacing-base $spacing-base 0 0 $bg-color-tertiary;
+  box-shadow: $spacing-small $spacing-small 0 0 $bg-color-tertiary;
   margin: 0 auto;
-  max-width: $width-large;
   min-height: 50vh;
 
   @include breakpoint("medium") {
@@ -81,39 +67,23 @@
   }
 
   .tz__content {
+    @include x-y-centered(flex-start);
+
+    flex-direction: column;
     margin: 0 auto;
     max-width: $width-base;
+    padding: $spacing-large;
   }
 }
 
 // Mid-size
 .tz--mid {
-  background-color: $bg-color-secondary;
   max-width: $width-medium;
   margin: 0 auto;
-  padding-bottom: $spacing-large;
-
-  .tz__media {
-    padding: 0 2rem;
-    margin: 0 auto;
-  }
+  max-width: $width-base;
 
   .tz__content {
-    margin: 0 auto;
-    max-width: $width-base;
-  }
-
-  @include breakpoint("medium") {
-    flex-direction: row;
-    padding: 0;
-
-    .tz__media {
-      padding: 0;
-    }
-
-    .tz__content {
-      max-width: 100%;
-    }
+    padding-top: $spacing-base;
   }
 }
 

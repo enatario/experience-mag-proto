@@ -39,9 +39,13 @@ gulp.task('css-dev', ["css-lint"], () => {
 //compile all styl and autoprefix, and minify
 gulp.task('css-prod', () => {
 	gulp.src(srcCSS)
-		.pipe(stylus())
+		.pipe(plumber({ errorHandler: report }))
+		.pipe(sass({
+			sourcemaps: true,
+			includePaths: [bourbon, "node_modules"]
+		}))
 		.pipe(autoprefixer())
 		.pipe(combineMq())
 		.pipe(rename('main.css'))
-		.pipe(gulp.dest('.tmp'))
+		.pipe(gulp.dest('dist/prod'))
 })

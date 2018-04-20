@@ -1,4 +1,19 @@
 body {
-  background-color: $color-offwhite;
+  background-color: $bg-color-base;
   color: $text-color-base;
+}
+
+main {
+  padding-top: 4rem;
+  position: relative;
+
+  &::after {
+    @include position(absolute, 0);
+
+    background-image: linear-gradient(to bottom, $bg-color-secondary 50%, transparent 50%);
+    content: "";
+    display: block;
+    height: 50vh;
+    z-index: get-z-index("basement")
+  }
 }
