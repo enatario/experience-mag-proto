@@ -1,0 +1,19 @@
+.cta {
+  border: 1px solid $bg-color-secondary;
+  box-shadow: 8px 8px 0 0 $bg-color-tertiary;
+  margin: 0 auto;
+  max-width: $width-base;
+  padding: $spacing-medium;
+  text-align: center;
+
+  > * {
+    &:not(:last-child) {
+      margin-bottom: $spacing-base;
+    }
+  }
+}
+.cta__title {
+  font-family: $font-family-display;
+  font-size: $font-size-medium;
+  font-weight: $font-weight-bold;
+}

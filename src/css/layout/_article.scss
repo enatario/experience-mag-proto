@@ -1,16 +1,11 @@
 .article-content {
-  margin: 0 auto;
-  max-width: $width-medium;
+  margin: 0 auto $spacing-large auto;
 
   figure {
     margin-bottom: $spacing-medium;
   }
 
-  picture {
-    margin-bottom: $spacing-base;
-  }
-
-  > *:not(figure) {
+  > *:not(figure):not(aside) {
     max-width: $width-base;
     margin-left: auto;
     margin-right: auto;

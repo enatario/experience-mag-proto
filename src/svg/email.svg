@@ -1,0 +1,14 @@
+<svg version="1.1" id="icon-email" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="15px" viewBox="0 0 20 15" style="enable-background:new 0 0 20 15" xml:space="preserve" aria-labelledby="email-title" role="img">
+  <title id="email-title">Email this</title>
+<g>
+  <g transform="translate(-388.000000, -512.000000)">
+    <g transform="translate(388.000000, 512.000000)">
+      <path d="M19.8,13.9c0.1-0.3,0.2-0.6,0.2-0.9V2c0-0.3-0.1-0.6-0.2-0.9l-5.6,5.3L19.8,13.9z"></path>
+      <path d="M9,7.2c0.5,0.5,1.4,0.5,2,0l7.5-7.1C18.3,0,18.1,0,18,0H2C1.8,0,1.7,0,1.5,0.1L9,7.2z"></path>
+      <path d="M13,7.6l-0.9,0.8c-0.6,0.6-1.4,0.8-2.1,0.8c-0.8,0-1.5-0.3-2.1-0.8L7,7.6L1.6,15c0.1,0,0.3,0,0.4,0h16
+        c0.2,0,0.3,0,0.5-0.1L13,7.6z"></path>
+      <path d="M0.2,1.2C0.1,1.4,0,1.7,0,2v11c0,0.4,0.1,0.7,0.3,1l5.5-7.5L0.2,1.2z"></path>
+    </g>
+  </g>
+</g>
+</svg>

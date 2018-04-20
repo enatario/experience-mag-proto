@@ -49,7 +49,11 @@ h3 {
   }
 }
 
-h4,
+h4 {
+  font-family: $font-family-display;
+  font-size: $font-size-base-plus;
+}
+
 h5,
 h6 {
   font-family: $font-family-sans;
@@ -97,19 +101,12 @@ blockquote {
     margin-bottom: $spacing-base;
   }
 
-  &:before, &:after {
+  &:before {
+    border-bottom: 2px solid $bg-color-tertiary;
     content: "";
     display: block;
     width: $spacing-large;
     margin: $spacing-base auto;
-  }
-
-  &:before {
-    border-bottom: 2px solid $bg-color-tertiary;
-  }
-
-  &:after {
-    border-top: 2px solid $bg-color-tertiary;
   }
 }
 
@@ -151,5 +148,15 @@ blockquote {
   font-weight: $font-weight-bold;
   letter-spacing: 2px;
   padding: $spacing-small;
+  text-transform: uppercase;
+}
+
+.overline--min {
+  color: $text-color-accent;
+  display: inline-block;
+  font-family: $font-family-sans;
+  font-size: $font-size-x-small;
+  font-weight: $font-weight-bold;
+  letter-spacing: 2px;
   text-transform: uppercase;
 }

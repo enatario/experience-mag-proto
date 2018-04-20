@@ -12,8 +12,12 @@
 // Layout
 @import "layout/article";
 @import "layout/media-layout";
+@import "layout/recirc";
 
 // Components
+@import "components/audio";
+@import "components/discuss-cta";
 @import "components/hero";
 @import "components/newsletter";
+@import "components/share-tools";
 @import "components/teases";

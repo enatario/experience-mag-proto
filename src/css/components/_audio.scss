@@ -1,0 +1,81 @@
+.audio {
+  background-color: $bg-color-accent;
+  color: $text-color-inverse;
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint("medium") {
+    flex-direction: row;
+    min-height: 80vh;
+  }
+
+  > * {
+    flex:  1;
+  }
+
+  picture,
+  img {
+    height: 100%;
+  }
+
+  img {
+    object-fit: cover;
+  }
+}
+
+.audio__sound {
+  @include x-y-centered;
+
+  flex-direction: column;
+  order: 2;
+  padding: $spacing-medium;
+
+  @include breakpoint("medium") {
+    order: 1;
+  }
+
+  figcaption {
+    font-weight: $font-weight-bold;
+    margin: 0 auto;
+    max-width: $width-x-small;
+    text-align: center;
+  }
+
+  > * {
+    margin-bottom: $spacing-base;
+  }
+}
+
+.audio__visual {
+  @include breakpoint("medium") {
+    order: 2;
+  }
+}
+
+.audio__btn {
+  background-color: $bg-color-base;
+  border: 0;
+  border-radius: $border-radius-circle;
+  padding: $spacing-large;
+
+  &.is-playing {
+    animation: pulse 2s infinite;
+    box-shadow: 0 0 0 3px darken($bg-color-accent, 30%);
+  }
+
+  svg {
+    fill: $bg-color-accent;
+
+    path {
+      animation: equalizer 0.75s alternate linear infinite;
+      transform: scaleY(0);
+      transform-origin: center bottom;
+
+      @for $i from 1 through 4 {
+        &:nth-of-type(#{$i + 1}) {
+          animation-delay: ($i * 0.5s);
+        }
+      }
+    }
+  }
+}

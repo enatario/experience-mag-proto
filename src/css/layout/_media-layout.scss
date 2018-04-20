@@ -25,3 +25,12 @@
     @include size(100%);
   }
 }
+
+.img {
+  margin: 0 auto;
+  max-width: $width-medium;
+
+  picture {
+    margin-bottom: $spacing-base;
+  }
+}

@@ -80,8 +80,20 @@
 .tz--mid {
   max-width: $width-medium;
   margin: 0 auto;
-  max-width: $width-base;
+  text-align: center;
 
+  .tz__content {
+    padding-top: $spacing-base;
+    margin: auto;
+    max-width: $width-small;
+  }
+
+  .tz__media {
+    height: 100%;
+  }
+}
+
+.tz--sm {
   .tz__content {
     padding-top: $spacing-base;
   }
