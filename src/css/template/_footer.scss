@@ -1,5 +1,7 @@
 .site-footer {
-  border-top: 5px solid $bg-color-secondary;
+  border: 1px solid $bg-color-tertiary;
+  background-color: $bg-color-secondary;
   display: flex;
   padding: $spacing-base;
+  margin-top: $spacing-large;
 }

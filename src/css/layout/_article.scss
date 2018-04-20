@@ -33,3 +33,13 @@
     }
   }
 }
+
+.author-bio {
+  border-bottom: 1px solid $bg-color-secondary;
+  text-align: center;
+  margin: 2rem auto;
+  padding-bottom: $spacing-base;
+  p {
+    font-family: $font-family-sans;
+  }
+}
