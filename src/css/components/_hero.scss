@@ -2,10 +2,7 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto 2rem auto;
-  padding: $spacing-base;
-}
 
-.hero--with-media {
   figure,
   picture,
   img {
@@ -15,11 +12,9 @@
   img {
     object-fit: cover;
   }
+}
 
-  .hero__content {
-    order: 2;
-  }
-
+.hero--spread {
   @include breakpoint("medium") {
     flex-direction: row;
     min-height: 90vh;
@@ -27,6 +22,43 @@
     > * {
       width: 50%;
     }
+  }
+
+  .hero__content {
+    max-width: $width-large;
+
+    @include breakpoint("medium") {
+      background-image: linear-gradient($bg-color-secondary ,$bg-color-secondary);
+      background-position: 50% 5%;
+      background-repeat: no-repeat;
+      background-size: 3px $spacing-xx-large;
+    }
+  }
+
+  .hero__inner {
+    max-width: $width-small;
+  }
+}
+
+.hero--fullscreen {
+
+  @include breakpoint("medium") {
+      background-image: linear-gradient($bg-color-secondary ,$bg-color-secondary);
+      background-position: 50% 80%;
+      background-repeat: no-repeat;
+      background-size: ($width-base * 1.5) 3px;
+    }
+
+  .hero__media {
+    max-height: 50vh;
+  }
+
+  img {
+    max-height: calc(50vh + #{$spacing-xx-large});
+  }
+
+  .hero__inner {
+    max-width: $width-base;
   }
 }
 
@@ -36,20 +68,10 @@
   background-color: $bg-color-base;
   flex-direction: column;
   margin: 0 auto;
-  max-width: $width-large;
   padding: $spacing-base;
-
-  @include breakpoint("medium") {
-    background-image: linear-gradient($bg-color-secondary ,$bg-color-secondary);
-    background-position: 50% 5%;
-    background-repeat: no-repeat;
-    background-size: 3px $spacing-xx-large;
-
-  }
 }
 
 .hero__inner {
-  max-width: $width-small;
   margin: 0 auto;
   text-align: center;
 
