@@ -94,35 +94,34 @@ figcaption {
 
 blockquote {
   margin: $spacing-large auto;
-  max-width: $width-small;
-
-  > * {
-    margin-bottom: $spacing-base;
-  }
-
-  &:before {
-    border-bottom: 2px solid $bg-color-tertiary;
-    content: "";
-    display: block;
-    width: $spacing-large;
-    margin: $spacing-base auto;
-  }
 }
 
 .bq--feature {
+  text-align: center;
+
+  > * {
+    &:not(:last-child) {
+      margin-bottom: $spacing-medium;
+    }
+  }
+
   p {
     font-family: $font-family-display;
     font-size: $font-size-medium;
-    text-align: center;
+    font-style: italic;
+    font-weight: $font-weight-bold;
+
+    @include breakpoint("medium") {
+      font-size: $font-size-large;
+    }
   }
 }
 
 .bq--sm {
-  background-color: $bg-color-base;
 
   p {
     font-style: italic;
-    margin-bottom: $spacing-base;
+    margin-bottom: 0;
   }
 }
 
