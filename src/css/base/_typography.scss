@@ -94,7 +94,6 @@ figcaption {
 
 blockquote {
   margin: $spacing-large auto;
-  text-align: center;
   max-width: $width-small;
 
   > * {
@@ -114,6 +113,7 @@ blockquote {
   p {
     font-family: $font-family-display;
     font-size: $font-size-medium;
+    text-align: center;
   }
 }
 

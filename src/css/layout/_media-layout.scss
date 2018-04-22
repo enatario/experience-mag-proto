@@ -34,3 +34,14 @@
     margin-bottom: $spacing-base;
   }
 }
+
+figure {
+  cite {
+    display: block;
+    font-family: $font-family-sans;
+    font-style: normal;
+    font-size: $font-size-x-small;
+    text-transform: uppercase;
+    transform: translateY(-0.5rem);
+  }
+}

@@ -1,34 +1,44 @@
-import { select, addClass, removeClass } from './utils/dom'
+import { selectAll, addClass, removeClass } from './utils/dom'
 import { Howl } from 'howler'
 
-const audioBtn = select('[data-audio-btn]')
+const audioBtns = selectAll('[data-audio-btn]')
 const vol = 0.5
 
-const sound = new Howl({
-  src: ['/assets/audio/audio-file.mp3'],
-  loop: true,
-  volume: vol,
-  preload: true,
-  html5: true,
-  onload: () => {
-    audioBtn.removeAttribute('hidden')
-  },
-  onplay: () => {
-    sound.fade(0, vol, 1000)
-  }
-})
+const audioSelect = () => {
+  audioBtns.forEach(button => {
+    const audioSrc = button.getAttribute('data-audio-btn')
+    
+    const audio = new Howl({
+      src: [audioSrc],
+      loop: true,
+      volume: vol,
+      preload: true,
+      html5: true,
+      onload: () => {
+        button.removeAttribute('hidden')
+      },
+      onplay: () => {
+        audio.fade(0, vol, 1000)
+      }
+    })
 
-const audioToggle = () => {
-  audioBtn.addEventListener('click', () => {
-    if (sound.playing()) {
-      sound.pause()
-      removeClass(audioBtn, 'is-playing')
-    }
-    else {
-      sound.play()
-      addClass(audioBtn, 'is-playing')
-    }
+    button.addEventListener('click', () => {
+      if (audio.playing()) {
+        audio.pause()
+        removeClass(button, 'is-playing')
+      }
+      else {
+        audio.play()
+        addClass(button, 'is-playing')
+      }
+    })
   })
 }
 
-export default audioToggle
+const audioPlay = () => {
+  if (audioBtns) {
+    audioSelect()
+  }
+}
+
+export default audioPlay
