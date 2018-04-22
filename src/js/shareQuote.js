@@ -1,7 +1,7 @@
-import { selectAll, select } from './utils/dom'
+import { selectAll, select } from "./utils/dom"
 
 const href = window.location.href
-const shares = selectAll('[data-share-text]')
+const shares = selectAll("[data-share-text]")
 
 const shareQuote = () => {
 
