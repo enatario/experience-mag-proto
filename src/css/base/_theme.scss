@@ -1,19 +1,29 @@
 body {
   background-color: $bg-color-base;
+  border-top: 5px solid $bg-color-tertiary;
   color: $text-color-base;
 }
 
 main {
-  padding-top: 4rem;
   position: relative;
 
-  &::after {
-    @include position(absolute, 0);
+  &::before {
+    @include position(absolute, 0 0 null 60%);
 
     background-image: linear-gradient(to bottom, $bg-color-secondary 50%, transparent 50%);
     content: "";
     display: block;
     height: 100vh;
+    z-index: get-z-index("basement");
+  }
+
+  &::after {
+    @include position(absolute, null 0 0 30%);
+
+    background-image: linear-gradient(to top, $bg-color-secondary 50%, transparent 50%);
+    content: "";
+    display: block;
+    height: 50vh;
     z-index: get-z-index("basement");
   }
 }

@@ -8,3 +8,22 @@
     }
   }
 }
+
+.topic-hed {
+  // background-color: $bg-color-base;s
+  // text-align: center;
+  border-top: 1px solid $bg-color-tertiary;
+  margin-bottom: $spacing-base;
+  max-width: $width-x-small;
+  p {
+    // font-family: $font-family-sans;
+    // text-align: center;
+  }
+}
+
+.topic-hed__title {
+  font-weight: $font-weight-bold;
+  font-size: $font-size-small;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
