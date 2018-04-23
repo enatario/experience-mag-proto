@@ -1,4 +1,4 @@
-<header class="hero hero--fullscreen">
+<header class="hero hero--{{type}}">
   <div class="hero__media">
     <figure>
       <picture>
@@ -13,8 +13,14 @@
   </div>
   <div class="hero__content">
     <div class="hero__inner">
-      <p class="overline">First Person</p>
-      <h1>Water terrifies me. Here’s how I took the plunge.</h1>
+      {{#if overline}}
+      <p class="overline">{{overline}}</p>
+      {{/if}}
+      {{#if link}}
+        <a href="#"><h1>Water terrifies me. Here’s how I took the plunge.</h1></a>
+      {{else}}
+        <h1>Water terrifies me. Here’s how I took the plunge.</h1>
+      {{/if}}
       <p>When we read them, books take us away from our lives. Years later, they’re vehicles for telling our own stories.</p>
       <address>
         <p>By <a href="#">Joan Anderman</a></p>

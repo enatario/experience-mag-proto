@@ -44,15 +44,10 @@
 // ------------------
 
 // Featured
-.tz--featured {
-  background-color: $bg-color-base;
-  box-shadow: $spacing-small $spacing-small 0 0 $bg-color-tertiary;
-  margin: 0 auto;
-  min-height: 50vh;
-
+.tz--feature {
+  background-color: $bg-color-secondary;
   @include breakpoint("medium") {
-    flex-direction: row;
-    min-height: 80vh;
+    flex-direction: row-reverse;
   }
 
   .tz__content {
@@ -60,8 +55,14 @@
 
     flex-direction: column;
     margin: 0 auto;
-    max-width: $width-base;
     padding: $spacing-large;
+
+    @include breakpoint("medium") {
+      background-color: $bg-color-base;
+      border: 1px solid $bg-color-secondary;
+      transform: translate($spacing-base, -($spacing-base));
+      z-index: get-z-index("layout");
+    }
   }
 }
 
@@ -85,7 +86,7 @@
   flex-direction: row;
 
   img {
-    width: $width-xx-small;
+    @include size($width-xx-small);
   }
 
   .tz__media {

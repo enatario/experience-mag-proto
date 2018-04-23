@@ -27,7 +27,7 @@
   grid-auto-flow: row;
   grid-gap: $spacing-base;
   grid-template-columns: 1fr;
-  grid-template-rows: $spacing-medium auto;
+  grid-template-rows: auto;
   height: 90%;
 
   @include breakpoint("small") {
@@ -39,15 +39,17 @@
   }
 
   @include breakpoint("medium") {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
 
     p {
-      grid-column: auto;
+      margin-bottom: $spacing-base;
     }
   }
 
   > .tz--sm {
     border-bottom: 1px solid $bg-color-secondary;
     padding-bottom: $spacing-base;
+    margin-bottom: $spacing-base;
   }
 }

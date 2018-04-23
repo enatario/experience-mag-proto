@@ -1,0 +1,10 @@
+.topic-container {
+  margin: 0 auto;
+  max-width: $width-large;
+
+  > * {
+    &:not(:last-child) {
+      margin-bottom: $spacing-xx-large;
+    }
+  }
+}
