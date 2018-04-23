@@ -13,7 +13,7 @@ main {
     background-image: linear-gradient(to bottom, $bg-color-secondary 50%, transparent 50%);
     content: "";
     display: block;
-    height: 50vh;
+    height: 100vh;
     z-index: get-z-index("basement")
   }
 }
