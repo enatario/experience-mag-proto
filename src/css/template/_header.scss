@@ -1,12 +1,12 @@
 .site-header {
-  display: flex;
   align-items: center;
   background-color: $bg-color-secondary;
+  display: flex;
   justify-content: space-between;
   padding: $spacing-small $spacing-large;
   position: fixed;
-  z-index: get-z-index("ceiling");
   width: 100%;
+  z-index: get-z-index("ceiling");
 }
 
 .site-header__logo {

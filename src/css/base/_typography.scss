@@ -1,7 +1,7 @@
 body {
+  -webkit-font-smoothing: antialiased;
   font-family: $font-family-base;
   font-size: $font-size-base;
-  -webkit-font-smoothing: antialiased;
   line-height: $line-height-base;
 }
 
@@ -61,9 +61,9 @@ h6 {
 }
 
 address {
-  font-style: normal;
   font-family: $font-family-sans;
   font-size: $font-size-small;
+  font-style: normal;
   font-weight: $font-weight-bold;
 }
 
@@ -91,8 +91,8 @@ figure {
   cite {
     display: block;
     font-family: $font-family-sans;
-    font-style: normal;
     font-size: $font-size-x-small;
+    font-style: normal;
     text-transform: uppercase;
     transform: translateY(-0.5rem);
   }
@@ -104,8 +104,8 @@ figcaption {
 }
 
 sup {
-  line-height: inherit;
   font-size: 100%;
+  line-height: inherit;
   top: auto;
 }
 
@@ -147,15 +147,15 @@ blockquote {
 }
 
 .crosshed {
-  margin-top: 3rem;
   margin-bottom: 0.5rem;
+  margin-top: 3rem;
 
   &::after {
+    border-bottom: 3px solid $bg-color-tertiary;
     content: "";
     display: block;
-    border-bottom: 3px solid $bg-color-tertiary;
-    width: 3rem;
-    margin-top: 1rem;
+    margin-top: $spacing-base;
+    width: $spacing-x-large;
   }
 }
 

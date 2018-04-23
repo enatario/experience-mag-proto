@@ -1,6 +1,6 @@
 .share-tools {
   font-family: $font-family-sans;
-  margin: 0 auto $spacing-large auto;
+  margin: 0 auto $spacing-large;
   position: relative;
 
   a {
@@ -54,8 +54,8 @@
   &:not(:last-child) {
     @include breakpoint("medium") {
       border-bottom: 1px solid $bg-color-secondary;
-      padding-bottom: $spacing-x-small;
       margin-bottom: $spacing-x-small;
+      padding-bottom: $spacing-x-small;
     }
   }
 

@@ -19,10 +19,10 @@ input {
   border: 0;
   font-size: $font-size-base;
   font-weight: $font-weight-bold;
-  padding: $spacing-base;
   height: $spacing-base * 3;
-  width: 100%;
+  padding: $spacing-base;
   transition: $transition-base;
+  width: 100%;
 
   &:focus {
     box-shadow: inset 0 0 0 3px $bg-color-accent;

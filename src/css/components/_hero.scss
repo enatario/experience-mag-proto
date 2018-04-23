@@ -1,7 +1,7 @@
 .hero {
   display: flex;
   flex-direction: column;
-  margin: 0 auto 2rem auto;
+  margin: 0 auto $spacing-large;
 
   figure,
   picture,
@@ -28,7 +28,7 @@
     max-width: $width-large;
 
     @include breakpoint("medium") {
-      background-image: linear-gradient($bg-color-secondary ,$bg-color-secondary);
+      background-image: linear-gradient($bg-color-secondary, $bg-color-secondary);
       background-position: 50% 5%;
       background-repeat: no-repeat;
       background-size: 3px $spacing-xx-large;
@@ -43,11 +43,11 @@
 .hero--fullscreen {
 
   @include breakpoint("medium") {
-      background-image: linear-gradient($bg-color-secondary ,$bg-color-secondary);
-      background-position: 50% 80%;
-      background-repeat: no-repeat;
-      background-size: ($width-base * 1.5) 3px;
-    }
+    background-image: linear-gradient($bg-color-secondary, $bg-color-secondary);
+    background-position: 50% 80%;
+    background-repeat: no-repeat;
+    background-size: ($width-base * 1.5) 3px;
+  }
 
   .hero__media {
     max-height: 50vh;

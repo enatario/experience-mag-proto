@@ -1,7 +1,7 @@
 .newsletter {
   background-color: $bg-color-secondary;
-  padding: $spacing-base;
   margin: $spacing-base auto;
+  padding: $spacing-base;
 }
 
 .newsletter__title {
@@ -33,8 +33,8 @@
   }
 
   button {
-    width: 100%;
     height: $spacing-base * 3;
+    width: 100%;
 
     @include breakpoint("medium") {
       width: 30%;

@@ -55,9 +55,10 @@ button {
       fill: $text-color-base;
     }
   }
+
   svg {
-    height: 0.75rem;
     fill: $bg-color-base;
+    height: 0.75rem;
     transition: $transition-base;
   }
 }

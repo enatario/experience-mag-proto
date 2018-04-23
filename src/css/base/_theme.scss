@@ -14,6 +14,6 @@ main {
     content: "";
     display: block;
     height: 100vh;
-    z-index: get-z-index("basement")
+    z-index: get-z-index("basement");
   }
 }
