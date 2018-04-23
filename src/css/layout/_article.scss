@@ -1,6 +1,10 @@
+.article {
+  margin-bottom: $spacing-xx-large;
+}
+
 .article-content {
   counter-reset: sup cite;
-  margin: 0 auto $spacing-large auto;
+  margin: 0 auto;
 
   figure {
     margin-bottom: $spacing-medium;

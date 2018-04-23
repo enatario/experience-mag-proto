@@ -2,13 +2,8 @@
   display: flex;
   flex-direction: column;
 
-  figure,
-  picture,
   img {
     height: 100%;
-  }
-
-  img {
     object-fit: cover;
   }
 }
@@ -78,7 +73,6 @@
 
 // Mid-size
 .tz--mid {
-  max-width: $width-medium;
   margin: 0 auto;
   text-align: center;
 
@@ -94,27 +88,17 @@
 }
 
 .tz--sm {
-  .tz__content {
-    padding-top: $spacing-base;
+  flex-direction: row;
+
+  img {
+    @include size($width-xx-small);
   }
-}
 
-// Tease List
-.tz__list {
-  border-bottom: 10px solid $bg-color-secondary;
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 1rem;
-
-  .tz__item {
-    padding: $spacing-small;
-
-    &:not(:last-child) {
-      border-right: 1px solid $bg-color-tertiary;
-    }
+  .tz__media {
+    margin-right: $spacing-base;
   }
 
   .tz__content {
-    padding: 1rem 0 0;
+    align-self: center;
   }
 }

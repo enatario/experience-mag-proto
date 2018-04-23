@@ -172,11 +172,16 @@ blockquote {
 }
 
 .overline--min {
-  color: $text-color-accent;
+  border-top: 5px solid $bg-color-secondary;
   display: inline-block;
   font-family: $font-family-sans;
   font-size: $font-size-x-small;
   font-weight: $font-weight-bold;
   letter-spacing: 2px;
+  padding-top: $spacing-small;
   text-transform: uppercase;
+
+  @include breakpoint("medium") {
+    border-top: 0;
+  }
 }
