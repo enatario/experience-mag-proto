@@ -1,14 +1,14 @@
 .recirc {
   border-top: 5px solid $bg-color-secondary;
   margin: $spacing-x-large auto;
-  max-width: $width-medium;
+  max-width: $width-large;
   padding-top: $spacing-base;
 
   @include breakpoint("medium") {
     display: grid;
     grid-gap: $spacing-large;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(1, 1fr);
+    grid-template-rows: auto;
   }
 
   > * {
@@ -27,6 +27,8 @@
   grid-auto-flow: row;
   grid-gap: $spacing-base;
   grid-template-columns: 1fr;
+  grid-template-rows: $spacing-medium auto;
+  height: 90%;
 
   @include breakpoint("small") {
     grid-template-columns: 1fr 1fr;

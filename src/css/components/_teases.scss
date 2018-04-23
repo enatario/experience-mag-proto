@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
 
+  figure,
+  picture,
   img {
     height: 100%;
     object-fit: cover;
@@ -83,7 +85,7 @@
   flex-direction: row;
 
   img {
-    @include size($width-xx-small);
+    width: $width-xx-small;
   }
 
   .tz__media {
