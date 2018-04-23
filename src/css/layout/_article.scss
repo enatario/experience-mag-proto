@@ -6,8 +6,8 @@
     margin-bottom: $spacing-medium;
   }
 
-  > *:not(figure):not(aside) {
-    max-width: $width-base;
+  > *:not(figure) {
+    max-width: $width-article-column;
     margin-left: auto;
     margin-right: auto;
   }
@@ -19,7 +19,7 @@
     position: relative;
 
     // Dropcap
-    &:first-child {
+    &:first-of-type {
       &::first-letter {
         border: 1px solid $bg-color-tertiary;
         color: $text-color-accent;
@@ -37,74 +37,7 @@
   }
 }
 
-.article-content__anno-btn {
-  background-image: linear-gradient($bg-color-secondary, $bg-color-secondary);
-  background-position: 0% 50%;
-  background-repeat: no-repeat;
-  background-size: 90% 100%;
-  counter-increment: sup;
-
-  @include breakpoint("medium") {
-    cursor: default;
-  }
-
-  &::after {
-    background-color: $bg-color-base;
-    border: 1px solid $bg-color-tertiary;
-    box-shadow: 3px 3px 0 0 $bg-color-tertiary;
-    color: $text-color-accent;
-    content: counter(sup);
-    font-family: $font-family-sans;
-    font-size: $font-size-small;
-    font-weight: $font-weight-bold;
-    margin: 0 $spacing-small;
-    padding: 0 $spacing-small;
-  }
-}
-
-.article-content__anno-copy {
-  counter-increment: cite;
-  display: block;
-  font-size: $font-size-small;
-  line-height: $line-height-base;
-  margin: $spacing-base 0;
-
-  @include breakpoint("medium") {
-    display: inline;
-    left: -($width-xx-small + 2rem);
-    position: absolute;
-    max-width: $width-xx-small;
-    text-align: right;
-
-    .js-is-loaded & {
-      @include hide-visually("unhide");
-
-      position: absolute;
-    }
-  }
-
-  &::before {
-    color: $text-color-accent;
-    content: counter(cite);
-    display: block;
-    font-family: $font-family-sans;
-    font-weight: $font-weight-bold;
-
-    @include breakpoint("medium") {
-      border-bottom: 2px solid $bg-color-secondary;
-      margin-bottom: $spacing-small;
-    }
-  }
-
-  .js-is-loaded & {
-    @include hide-visually;
-
-    &.is-open {
-      @include hide-visually("unhide");
-    }
-  }
-}
-
+// Author bio
 .author-bio {
   border-bottom: 1px solid $bg-color-secondary;
   text-align: center;

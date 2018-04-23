@@ -1,37 +1,33 @@
 .share-tools {
-  border: 1px solid $bg-color-secondary;
   font-family: $font-family-sans;
-  margin: 0 auto;
-  max-width: $width-base;
-  padding: $spacing-base;
-
-  @include breakpoint("medium") {
-    border: 0;
-    position: absolute;
-    left: 5rem;
-    right: auto;
-    max-width: $width-xx-small;
-    padding: 0;
-    // transform: translateX(-#{$width-base / 1.25});
-  }
+  margin: 0 auto $spacing-large auto;
+  position: relative;
 
   a {
-    align-items: center;
     color: $text-color-accent;
-    display: flex;
-
-    svg {
-      fill: currentColor;
-      margin-right: $spacing-small;
-      width: $spacing-base;
-    }
 
     &:hover {
       color: $text-color-base;
     }
+
+    svg {
+      fill: currentColor;
+    }
   }
 }
 
+.share-tools__container {
+  border-top: 5px solid $bg-color-secondary;
+  padding-top: $spacing-small;
+
+  @include breakpoint("medium") {
+    @include offside-column;
+
+    border-top: 0;
+  }
+}
+
+// Share tools
 .share-tools__title {
   font-weight: $font-weight-bold;
   line-height: $line-height-tight;
@@ -49,7 +45,7 @@
 }
 
 .share-tools__item {
-  padding: $spacing-small;
+  padding-right: $spacing-base;
 
   @include breakpoint("medium") {
     padding: 0;
@@ -61,5 +57,16 @@
       padding-bottom: $spacing-x-small;
       margin-bottom: $spacing-x-small;
     }
+  }
+
+  a {
+    align-items: center;
+    display: inline-flex;
+    flex-direction: row-reverse;
+  }
+
+  svg {
+    margin-right: $spacing-small;
+    width: $spacing-base;
   }
 }

@@ -30,3 +30,11 @@
   display: flex;
   justify-content: center;
 }
+
+// Offside column
+@mixin offside-column {
+  position: absolute;
+  left: -($width-offside-column + 2rem);
+  max-width: $width-offside-column;
+  text-align: right;
+}
