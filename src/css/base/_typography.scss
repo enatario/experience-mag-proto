@@ -87,9 +87,30 @@ a {
   }
 }
 
+figure {
+  cite {
+    display: block;
+    font-family: $font-family-sans;
+    font-style: normal;
+    font-size: $font-size-x-small;
+    text-transform: uppercase;
+    transform: translateY(-0.5rem);
+  }
+}
+
 figcaption {
   font-family: $font-family-sans;
   font-size: $font-size-small;
+}
+
+sup {
+  line-height: inherit;
+  font-size: 100%;
+  top: auto;
+}
+
+cite {
+  font-style: normal;
 }
 
 blockquote {

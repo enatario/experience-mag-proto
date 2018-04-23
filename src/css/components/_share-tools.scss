@@ -8,10 +8,11 @@
   @include breakpoint("medium") {
     border: 0;
     position: absolute;
-    left: 50%;
+    left: 5rem;
+    right: auto;
     max-width: $width-xx-small;
     padding: 0;
-    transform: translateX(-#{$width-base / 1.25});
+    // transform: translateX(-#{$width-base / 1.25});
   }
 
   a {
