@@ -1,8 +1,9 @@
 .site-header {
   align-items: center;
+  background-color: $bg-color-secondary;
   display: flex;
   justify-content: space-between;
-  padding: $spacing-small $spacing-large;
+  padding: $spacing-medium;
   width: 100%;
   z-index: get-z-index("ceiling");
 }
@@ -10,7 +11,7 @@
 .site-header__logo {
   svg {
     display: block;
-    height: $spacing-medium;
+    height: $spacing-large;
   }
 }
 

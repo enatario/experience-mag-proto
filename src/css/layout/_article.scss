@@ -22,23 +22,6 @@
     line-height: 2;
     margin-bottom: $spacing-large;
     position: relative;
-
-    // Dropcap
-    &:first-of-type {
-      &::first-letter {
-        border: 1px solid $bg-color-tertiary;
-        box-shadow: 5px 5px 0 $bg-color-secondary;
-        color: $text-color-accent;
-        float: left;
-        font-family: $font-family-display;
-        font-size: $font-size-xx-large;
-        font-weight: $font-weight-bold;
-        line-height: 1;
-        margin: $spacing-small $spacing-base 0 0;
-        padding: $spacing-x-small $spacing-base;
-        text-transform: uppercase;
-      }
-    }
   }
 }
 

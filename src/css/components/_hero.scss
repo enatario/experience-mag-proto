@@ -42,13 +42,6 @@
 
 .hero--fullscreen {
 
-  @include breakpoint("medium") {
-    background-image: linear-gradient($bg-color-secondary, $bg-color-secondary);
-    background-position: 50% 80%;
-    background-repeat: no-repeat;
-    background-size: ($width-base * 1.5) 3px;
-  }
-
   .hero__media {
     max-height: 50vh;
   }
@@ -68,7 +61,7 @@
   background-color: $bg-color-base;
   flex-direction: column;
   margin: 0 auto;
-  padding: $spacing-base;
+  padding: $spacing-medium;
 }
 
 .hero__inner {
