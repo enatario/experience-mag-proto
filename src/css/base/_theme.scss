@@ -1,6 +1,7 @@
 body {
   background-color: $bg-color-base;
   color: $text-color-base;
+  padding: 0 $spacing-small;
 
   &::after {
     @include position(fixed, 0);
