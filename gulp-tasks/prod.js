@@ -10,7 +10,6 @@ const runTasks = (cb) => {
 		'minify-prod',
 		'assets-prod',
 		'zip-prod',
-		'chmod-prod',
 		cb
 	)
 }
