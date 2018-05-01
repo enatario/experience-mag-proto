@@ -76,7 +76,8 @@ a {
     color: $text-color-accent;
   }
 
-  &:not([class]) {
+  p &,
+  address & {
     color: $text-color-accent;
     display: inline;
 
@@ -131,7 +132,7 @@ cite {
     font-size: rem(100px);
     font-style: italic;
     font-weight: $font-weight-bold;
-    line-height: 0;
+    line-height: 0.5;
     margin-bottom: $spacing-base;
   }
 
@@ -195,5 +196,15 @@ cite {
   font-weight: $font-weight-bold;
   letter-spacing: 2px;
   padding: $spacing-small;
+  text-transform: uppercase;
+}
+
+.overline--min {
+  border-bottom: 1px solid $bg-color-secondary;
+  font-family: $font-family-sans;
+  font-size: $font-size-x-small;
+  font-weight: $font-weight-bold;
+  letter-spacing: 2px;
+  padding-bottom: $spacing-small;
   text-transform: uppercase;
 }
