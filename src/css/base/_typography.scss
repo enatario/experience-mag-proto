@@ -76,13 +76,17 @@ a {
     color: $text-color-accent;
   }
 
-  p &,
-  address & {
+  &:not([class]) {
     color: $text-color-accent;
     display: inline;
 
     &:hover {
       text-decoration: underline;
+    }
+
+    blockquote &:hover {
+      color: $text-color-base;;
+      text-decoration: none;
     }
   }
 }
