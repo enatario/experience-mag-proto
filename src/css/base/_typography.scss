@@ -116,7 +116,20 @@ cite {
 .bq--feature {
   margin: 0 auto;
   max-width: $width-base;
+  quotes: "“" "”" "‘" "’";
   text-align: center;
+
+  &::before {
+    color: $text-color-accent;
+    content: open-quote;
+    display: block;
+    font-family: $font-family-display;
+    font-size: rem(100px);
+    font-style: italic;
+    font-weight: $font-weight-bold;
+    line-height: 0;
+    margin-bottom: $spacing-base;
+  }
 
   > * {
     &:not(:last-child) {
@@ -132,6 +145,17 @@ cite {
 
     @include breakpoint("medium") {
       font-size: $font-size-large;
+    }
+  }
+
+  cite {
+    display: block;
+    font-family: $font-family-sans;
+    font-weight: $font-weight-bold;
+    text-align: right;
+
+    &::before {
+      content: "\2014";
     }
   }
 }
