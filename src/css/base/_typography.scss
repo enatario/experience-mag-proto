@@ -193,22 +193,3 @@ cite {
   padding: $spacing-small;
   text-transform: uppercase;
 }
-
-.overline--min {
-  background-color: $bg-color-base;
-  background-image: linear-gradient($bg-color-secondary, $bg-color-secondary);
-  background-position: 100% 50%;
-  background-repeat: no-repeat;
-  background-size: 65% 1px;
-  display: inline-block;
-  font-family: $font-family-sans;
-  font-size: $font-size-x-small;
-  font-weight: $font-weight-bold;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-
-  @include breakpoint("medium") {
-    border-top: 0;
-    padding-top: 0;
-  }
-}
