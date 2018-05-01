@@ -26,12 +26,19 @@
   }
 }
 
-.img {
+.media {
   margin-left: auto;
   margin-right: auto;
-  max-width: $width-medium;
 
   picture {
     margin-bottom: $spacing-base;
   }
+}
+
+.media--full {
+  max-width: $width-medium;
+}
+
+.media--inline {
+  max-width: $width-base;
 }
