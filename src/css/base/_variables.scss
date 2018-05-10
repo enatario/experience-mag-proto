@@ -25,8 +25,9 @@ $font-weight-normal: 400;
 $font-weight-bold: 700;
 
 // Line heights
-$line-height-base: 1.5;
 $line-height-tight: 1;
+$line-height-base: 1.5;
+$line-height-generous: 2;
 
 // Font sizes
 $font-size-global: 16px;
@@ -34,7 +35,9 @@ $font-size-xx-small: rem(10px);
 $font-size-x-small: rem(12px);
 $font-size-small: rem(14px);
 $font-size-base: rem($font-size-global);
+$font-size-copy: rem(18px);
 $font-size-base-plus: rem(20px);
+$font-size-base-super: rem(24px);
 $font-size-medium: rem(28px);
 $font-size-large: rem(36px);
 $font-size-x-large: rem(48px);

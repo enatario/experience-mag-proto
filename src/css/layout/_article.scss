@@ -18,8 +18,8 @@
   }
 
   > p {
-    font-size: 1.1rem;
-    line-height: 2;
+    font-size: $font-size-copy;
+    line-height: $line-height-generous;
     margin-bottom: $spacing-large;
     position: relative;
   }

@@ -57,7 +57,7 @@ h4 {
 h5,
 h6 {
   font-family: $font-family-sans;
-  font-size: $font-size-base-plus;
+  font-size: $font-size-base-super;
 }
 
 address {
@@ -166,23 +166,28 @@ cite {
 }
 
 .bq--sm {
-  padding-left: $spacing-large;
+  background-color: $bg-color-secondary;
+  padding: $spacing-large;
 
   p {
-    font-style: italic;
+    font-size: $font-size-copy;
+    line-height: $line-height-generous;
     margin-bottom: 0;
   }
 }
 
 .crosshed {
-  margin-bottom: 0.5rem;
-  margin-top: 3rem;
+  margin-bottom: $spacing-base;
+  margin-top: $spacing-x-large;
+  position: relative;
 
-  &::after {
-    border-bottom: 3px solid $bg-color-tertiary;
+  &::before {
+    border-bottom: 1px solid $bg-color-tertiary;
     content: "";
     display: block;
-    margin-top: $spacing-base;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-($spacing-x-large + $spacing-small));
     width: $spacing-x-large;
   }
 }
