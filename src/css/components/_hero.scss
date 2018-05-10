@@ -3,11 +3,11 @@
   flex-direction: column;
   margin: 0 auto $spacing-large;
 
-  figure,
-  picture,
-  img {
-    height: 100%;
-  }
+  // figure,
+  // picture,
+  // img {
+  //   height: 100%;
+  // }
 
   img {
     object-fit: cover;
@@ -26,13 +26,6 @@
 
   .hero__content {
     max-width: $width-large;
-
-    @include breakpoint("medium") {
-      background-image: linear-gradient($bg-color-secondary, $bg-color-secondary);
-      background-position: 50% 5%;
-      background-repeat: no-repeat;
-      background-size: 3px $spacing-xx-large;
-    }
   }
 
   .hero__inner {
@@ -41,13 +34,35 @@
 }
 
 .hero--fullscreen {
+  $_hero-max-height: 80vh;
+
+  padding: 0 $spacing-x-large;
 
   .hero__media {
-    max-height: 50vh;
+    position: relative;
+
+    @include breakpoint("medium") {
+      &:after {
+        @include position(absolute, $spacing-large (-$spacing-large) (-$spacing-large));
+
+        background-color: $bg-color-secondary;
+        content: "";
+        display: block;
+        z-index: get-z-index("basement");
+      }
+    }
   }
 
   img {
-    max-height: calc(50vh + #{$spacing-xx-large});
+    max-height: $_hero-max-height;
+  }
+
+  .hero__content {
+    position: relative;
+
+    @include breakpoint("medium") {
+      margin-top: -($spacing-xx-large);
+    }
   }
 
   .hero__inner {
