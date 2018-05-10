@@ -73,16 +73,28 @@
 
 .site-menu__nav {
   order: 1;
+  position: relative;
 
   @include breakpoint("medium") {
     order: 2;
   }
 }
 
+.site-menu__hover-image {
+  @include position(absolute, 0);
+
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.4;
+  pointer-events: none;
+  transition: background-image 0.2s ease;
+  z-index: get-z-index("basement");
+}
+
 .site-menu__list-item {
 
   a {
-    color: $text-color-accent;
     font-family: $font-family-display;
     font-size: $font-size-large;
     font-weight: $font-weight-bold;
@@ -92,7 +104,7 @@
     }
 
     &:hover {
-      color: $text-color-base;
+      color: $text-color-accent;
     }
   }
 }

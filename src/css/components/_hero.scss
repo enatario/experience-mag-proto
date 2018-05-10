@@ -99,9 +99,9 @@
 .hero--homepage {
   $_hero-max-height: 85vh;
 
+  background-color: $bg-color-gradient;
   color: $text-color-inverse;
   position: relative;
-  text-shadow: 2px 2px 8px $color-offblack;
 
   .hero__media {
     position: relative;
@@ -129,7 +129,6 @@
   }
 
   .hero__content {
-    background-color: $bg-color-gradient;
 
     @include breakpoint("medium") {
       @include position(absolute, null 0 0);
