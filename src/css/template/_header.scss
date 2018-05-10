@@ -1,10 +1,10 @@
 .site-header {
   align-items: center;
-  // background-color: $bg-color-secondary;
+  border-bottom: 1px solid $bg-color-secondary;
   display: flex;
   justify-content: space-between;
-  padding: $spacing-medium;
-  width: 100%;
+  margin: 0 $spacing-medium;
+  padding: $spacing-medium 0;
   z-index: get-z-index("ceiling");
 }
 

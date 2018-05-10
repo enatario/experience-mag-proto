@@ -21,8 +21,10 @@ main {
   margin-bottom: $spacing-large;
 
   section {
-    margin: 0 auto;
-    max-width: $width-large;
-    width: 90%;
+    &:not(.hero) {
+      margin: 0 auto;
+      max-width: $width-large;
+      width: 90%;
+    }
   }
 }

@@ -10,25 +10,15 @@
 }
 
 .topic-hed {
-  background-color: $bg-color-secondary;
-  background-image: linear-gradient(to top, $bg-color-tertiary, $bg-color-tertiary);
-  background-position: 100% 50%;
-  background-repeat: no-repeat;
-  background-size: calc(100% - #{$spacing-medium}) 1px;
-  font-family: $font-family-sans;
-  font-size: $font-size-small;
-  
-  padding: $spacing-base $spacing-medium;
-
-  span {
-    background-color: $bg-color-secondary;
-
-    &:last-child {
-      padding-right: $spacing-base;
-    }
-  }
+  margin: $spacing-x-large;
+  text-align: center;
 }
 
 .topic-hed__title {
-  font-weight: $font-weight-bold;
+  font-size: $font-size-xx-large;
+  font-style: italic;
+}
+
+.topic-hed__subtitle {
+  font-family: $font-family-sans;
 }

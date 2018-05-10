@@ -3,12 +3,6 @@
   flex-direction: column;
   margin: 0 auto $spacing-large;
 
-  // figure,
-  // picture,
-  // img {
-  //   height: 100%;
-  // }
-
   img {
     object-fit: cover;
   }
@@ -22,6 +16,12 @@
     > * {
       width: 50%;
     }
+  }
+
+  figure,
+  picture,
+  img {
+    height: 100%;
   }
 
   .hero__content {

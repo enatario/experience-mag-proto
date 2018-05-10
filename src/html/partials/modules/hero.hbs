@@ -1,4 +1,9 @@
+{{#if subpage}}
+<section class="hero hero--{{type}}">
+{{else}}
 <header class="hero hero--{{type}}">
+{{/if}}
+
   <div class="hero__media">
     <figure>
       <picture>
@@ -16,8 +21,8 @@
       {{#if overline}}
       <p class="overline">{{overline}}</p>
       {{/if}}
-      {{#if link}}
-        <a href="#"><h1>Water terrifies me. Here’s how I took the plunge.</h1></a>
+      {{#if subpage}}
+        <a href="#"><h2>Water terrifies me. Here’s how I took the plunge.</h2></a>
       {{else}}
         <h1>Water terrifies me. Here’s how I took the plunge.</h1>
       {{/if}}
@@ -28,4 +33,8 @@
       </address>
     </div>
   </div>
+{{#if subpage}}
+</section>
+{{else}}
 </header>
+{{/if}}
