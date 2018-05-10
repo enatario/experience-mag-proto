@@ -1,9 +1,8 @@
 .site-header {
   align-items: center;
-  border-bottom: 1px solid $bg-color-secondary;
   display: flex;
   justify-content: space-between;
-  margin: 0 $spacing-medium;
+  margin: 0 $spacing-medium $spacing-base;
   padding: $spacing-medium 0;
   z-index: get-z-index("ceiling");
 }
@@ -11,7 +10,6 @@
 .site-header__logo {
   svg {
     display: block;
-    height: $spacing-large;
   }
 }
 
