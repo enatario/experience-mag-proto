@@ -1,0 +1,20 @@
+{{#> layout }}
+    <article class="article">
+    {{> modules/hero type="fullscreen" overline="First Person"}}
+
+    <button class="btn--primary" data-article-toggle-btn="article-title-1">Read more</button>
+    <div class="article--hidden" hidden data-article-toggle-content="article-title-1">
+    {{> modules/article-text-content }}
+    </div>
+  </article>
+
+  <article class="article">
+    {{> modules/hero type="fullscreen" overline="First Person"}}
+
+    <button class="btn--primary" data-article-toggle-btn="article-title-2">Read more</button>
+    <div class="article--hidden" hidden data-article-toggle-content="article-title-2">
+    {{> modules/article-text-content }}
+    </div>
+  </article>
+
+{{/layout}}
