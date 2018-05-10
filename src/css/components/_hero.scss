@@ -60,7 +60,7 @@
   $_hero-max-height: 80vh;
 
   @include breakpoint("medium") {
-    padding: 0 $spacing-x-large;
+    padding: 0 $spacing-medium;
   }
 
   .hero__media {
@@ -97,7 +97,7 @@
 }
 
 .hero--homepage {
-  $_hero-max-height: 85vh;
+  $_hero-max-height: 100vh;
 
   background-color: $bg-color-gradient;
   color: $text-color-inverse;
