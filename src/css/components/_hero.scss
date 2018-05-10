@@ -36,7 +36,9 @@
 .hero--fullscreen {
   $_hero-max-height: 80vh;
 
-  padding: 0 $spacing-x-large;
+  @include breakpoint("medium") {
+    padding: 0 $spacing-x-large;
+  }
 
   .hero__media {
     position: relative;
@@ -45,7 +47,7 @@
       &:after {
         @include position(absolute, $spacing-large (-$spacing-large) (-$spacing-large));
 
-        background-color: $bg-color-secondary;
+        border: 2px solid $bg-color-secondary;
         content: "";
         display: block;
         z-index: get-z-index("basement");

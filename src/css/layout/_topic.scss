@@ -2,9 +2,7 @@
 
   > * {
     &:not(:last-child) {
-      border-bottom: 5px solid $bg-color-secondary;
-      margin-bottom: $spacing-x-large;
-      padding-bottom: $spacing-large;
+      margin-bottom: $spacing-xx-large;
     }
   }
 }
@@ -15,8 +13,12 @@
 }
 
 .topic-hed__title {
-  font-size: $font-size-xx-large;
+  font-size: $font-size-x-large;
   font-style: italic;
+
+  @include breakpoint("medium") {
+    font-size: $font-size-xx-large;
+  }
 }
 
 .topic-hed__subtitle {

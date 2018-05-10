@@ -22,6 +22,12 @@
       grid-column: auto;
     }
   }
+
+  > * {
+    &:only-child {
+      grid-column: 1 / 4;
+    }
+  }
 }
 
 .recirc__big {
