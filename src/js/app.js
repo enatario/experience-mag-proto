@@ -1,6 +1,6 @@
 import setPathCookie from "./utils/setPathCookie.js"
 import removeMobileHover from "./utils/removeMobileHover.js"
-import nav from "./nav.js"
+import menu from "./menu.js"
 import shareQuote from "./shareQuote.js"
 import audio from "./audio.js"
 import annotations from "./annotations.js"
@@ -12,7 +12,7 @@ removeMobileHover()
 setPathCookie()
 
 // App
-nav()
+menu()
 shareQuote()
 audio()
 annotations()

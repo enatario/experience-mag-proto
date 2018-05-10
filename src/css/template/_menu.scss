@@ -1,0 +1,120 @@
+.site-menu {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+
+  @include breakpoint("medium") {
+    flex-direction: row;
+  }
+
+  .js-is-loaded & {
+    @include hide-visually;
+
+    &.is-revealed {
+      @include hide-visually("unhide");
+
+      height: auto;
+      min-height: 90vh;
+      opacity: 1;
+      overflow: visible;
+      padding: $spacing-large 0;
+      position: static;
+      width: 100%;
+    }
+  }
+}
+
+.site-menu__item {
+  flex: 1;
+  opacity: 0;
+  padding: $spacing-medium;
+  transform: translateY($spacing-large);
+  transition: opacity 0.2s linear, transform 0.2s linear;
+
+  .site-menu.is-revealed & {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @for $i from 1 through 2 {
+    &:nth-child(#{$i}) {
+      transition-delay: 0.2s * $i;
+    }
+  }
+}
+
+.site-menu__about {
+  order: 2;
+
+  @include breakpoint("medium") {
+    order: 1;
+  }
+}
+
+.site-menu__nav {
+  order: 1;
+
+  @include breakpoint("medium") {
+    order: 2;
+  }
+}
+
+.site-menu__list-item {
+
+  a {
+    color: $text-color-accent;
+    font-family: $font-family-display;
+    font-size: $font-size-large;
+    font-weight: $font-weight-bold;
+
+    @include breakpoint("medium") {
+      font-size: $font-size-xx-large;
+    }
+
+    &:hover {
+      color: $text-color-base;
+    }
+  }
+}
+
+.site-menu__inner {
+  margin: 0 auto;
+  max-width: $width-small;
+}
+
+.site-menu__btn {
+  align-items: center;
+  display: flex;
+
+  &:hover {
+    &::before {
+      background-color: $bg-color-accent;
+    }
+  }
+
+  &::before {
+    @include size($spacing-small);
+
+    border: 1px solid $bg-color-accent;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    margin-right: $spacing-small;
+    transition: $transition-base;
+  }
+}
+
+body.menu-is-revealed {
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+
+  > header {
+    background-image: linear-gradient(to right, $bg-color-secondary 50%, $bg-color-base 50%);
+  }
+
+  main {
+    display: none;
+  }
+}

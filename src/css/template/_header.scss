@@ -1,9 +1,10 @@
 .site-header {
-  align-items: center;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  margin: 0 $spacing-medium $spacing-base;
-  padding: $spacing-medium 0;
+  // margin: 0 $spacing-medium $spacing-base;
+  overflow-y: auto;
+  padding: $spacing-medium $spacing-x-large;
   z-index: get-z-index("ceiling");
 }
 
