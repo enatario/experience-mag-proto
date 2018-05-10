@@ -45,10 +45,29 @@
 }
 
 .site-menu__about {
+  background-color: $bg-color-secondary;
   order: 2;
 
   @include breakpoint("medium") {
     order: 1;
+  }
+
+  .overline--min {
+    border-bottom-color: $bg-color-tertiary;
+  }
+}
+
+.site-menu__footer {
+  margin-top: auto;
+
+  cite {
+    display: block;
+    font-family: $font-family-sans;
+    font-size: $font-size-x-small;
+    font-weight: $font-weight-bold;
+    letter-spacing: 2px;
+    margin-top: $spacing-base;
+    text-transform: uppercase;
   }
 }
 
@@ -79,8 +98,17 @@
 }
 
 .site-menu__inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   margin: 0 auto;
   max-width: $width-small;
+
+  > * {
+    &:not(:last-child) {
+      margin-bottom: $spacing-base;
+    }
+  }
 }
 
 .site-menu__btn {
@@ -105,16 +133,56 @@
   }
 }
 
-body.menu-is-revealed {
-  height: 100%;
-  overflow: hidden;
-  width: 100%;
+.site-menu__social {
+  display: flex;
 
-  > header {
-    background-image: linear-gradient(to right, $bg-color-secondary 50%, $bg-color-base 50%);
+  li {
+    margin-right: $spacing-base;
   }
 
-  main {
-    display: none;
+  a {
+    display: block;
+
+    &:hover {
+      svg {
+        fill: $color-offblack;
+      }
+    }
+  }
+
+  svg {
+    display: block;
+    fill: $text-color-accent;
+    transition: $transition-base;
+  }
+}
+
+body {
+
+  &.menu-is-revealed {
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+
+    main {
+      display: none;
+    }
+
+    .site-menu__btn {
+
+      &:hover {
+        &::before {
+          background-color: transparent;
+          color: $text-color-accent;
+        }
+      }
+
+      &::before {
+        border: 0;
+        content: "×";
+        height: auto;
+        width: auto;
+      }
+    }
   }
 }
