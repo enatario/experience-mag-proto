@@ -89,10 +89,9 @@
 .hero--homepage {
   $_hero-max-height: 100vh;
 
-  margin-bottom: $spacing-x-large;
-
   background-color: $bg-color-gradient;
   color: $text-color-inverse;
+  margin-bottom: $spacing-x-large;
   position: relative;
 
   .hero__media {
