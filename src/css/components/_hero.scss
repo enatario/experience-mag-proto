@@ -1,7 +1,8 @@
 .hero {
   display: flex;
   flex-direction: column;
-  margin: 0 auto $spacing-large;
+  margin-left: auto;
+  margin-right: auto;
 
   img {
     object-fit: cover;
@@ -32,6 +33,8 @@
 }
 
 .hero--spread {
+  margin-bottom: $spacing-large;
+
   @include breakpoint("medium") {
     flex-direction: row;
     min-height: 90vh;
@@ -57,25 +60,12 @@
 }
 
 .hero--fullscreen {
+  margin-bottom: $spacing-large;
+
   $_hero-max-height: 80vh;
 
   @include breakpoint("medium") {
     padding: 0 $spacing-medium;
-  }
-
-  .hero__media {
-    position: relative;
-
-    @include breakpoint("medium") {
-      &:after {
-        @include position(absolute, $spacing-large (-$spacing-large) (-$spacing-large));
-
-        border: 2px solid $bg-color-secondary;
-        content: "";
-        display: block;
-        z-index: get-z-index("basement");
-      }
-    }
   }
 
   img {
@@ -98,6 +88,8 @@
 
 .hero--homepage {
   $_hero-max-height: 100vh;
+
+  margin-bottom: $spacing-x-large;
 
   background-color: $bg-color-gradient;
   color: $text-color-inverse;

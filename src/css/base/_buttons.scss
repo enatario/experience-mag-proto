@@ -34,6 +34,7 @@ button[data-article-toggle-btn] {
 .btn--secondary {
   @extend %btn;
 
+  background-color: $bg-color-base;
   box-shadow: 0 0 0 1px $bg-color-accent;
   padding: $spacing-small;
 

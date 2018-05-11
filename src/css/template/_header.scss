@@ -1,13 +1,10 @@
 .site-header {
-  @include position(absolute, 0 null null 0);
-
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   overflow-y: auto;
   padding: $spacing-medium $spacing-x-large;
   width: 100%;
-  z-index: get-z-index("ceiling");
 }
 
 .site-header__logo {
@@ -31,4 +28,8 @@
     transform: translate(-50%);
     z-index: get-z-index("ceiling");
   }
+}
+
+.icon-color {
+  fill: $text-color-accent;
 }

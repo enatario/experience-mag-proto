@@ -1,26 +1,21 @@
 .topic-container {
 
   > * {
-    &:not(:last-child) {
-      margin-bottom: $spacing-xx-large;
-    }
+    margin-bottom: $spacing-xx-large;
   }
 }
 
 .topic-hed {
-  margin: $spacing-xx-large $spacing-x-large $spacing-x-large;
   text-align: center;
-}
-
-.topic-hed__title {
-  font-size: $font-size-x-large;
-  font-style: italic;
-
-  @include breakpoint("medium") {
-    font-size: $font-size-xx-large;
-  }
+  margin: $spacing-x-large 0 $spacing-base 0;
 }
 
 .topic-hed__subtitle {
-  font-family: $font-family-sans;
+  font-family: $font-family-display;
+  font-size: $font-size-base-super;
+  font-style: italic;
+
+  @include breakpoint("medium") {
+    font-size: $font-size-large;
+  }
 }

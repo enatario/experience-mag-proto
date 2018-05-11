@@ -15,12 +15,12 @@ const revealArticle = () => {
 
         if (!isHidden) {
           article.setAttribute("hidden", "")
-          btn.innerHTML = "Read more"
+          btn.innerHTML = "Read more +"
         }
 
         else {
           article.removeAttribute("hidden")
-          btn.innerHTML = "Collapse story"
+          btn.innerHTML = "Collapse story -"
         }
       })
 

@@ -15,14 +15,6 @@
     }
   }
 
-  p {
-    grid-column: 1 / 3;
-
-    @include breakpoint("small") {
-      grid-column: auto;
-    }
-  }
-
   > * {
     &:only-child {
       grid-column: 1 / 4;
@@ -36,5 +28,25 @@
   @include breakpoint("small") {
     grid-column: 1 / 3;
     grid-row: 1 / 4;
+  }
+}
+
+.recirc--layout-grid {
+  .overline--min {
+    grid-column: 1 / 3;
+
+    @include breakpoint("small") {
+      grid-column: auto;
+    }
+  }
+}
+
+.recirc--even-grid {
+  .overline--min {
+    grid-column: 1 / 3;
+
+    @include breakpoint("small") {
+      grid-column: 1 / 4;
+    }
   }
 }

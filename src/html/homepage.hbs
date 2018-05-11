@@ -4,20 +4,26 @@
 
   <section class="topic-container">
 
-    <section class="recirc">
-      {{> modules/tease-mid recircclass="recirc__big" byline=true overline="Right Now" headline="Water terrifies me. Here’s how I took the plunge."}}
-      {{> modules/tease-sm}}
+    <section class="recirc recirc--layout-grid">
+      {{> modules/tease-mid recircclass="recirc__big" byline=true overline="In the News" headline="Water terrifies me. Here’s how I took the plunge."}}
+      <p class="overline--min">Stories in <a href="#">First Person</a></p>
+      {{> modules/tease-sm }}
       {{> modules/tease-sm}}
     </section>
+  </section>
 
-    <section class="recirc">
+    {{> modules/hero type="homepage" overline="First Person" subpage=true}}
+
+<section class="topic-container">
+    <section class="recirc recirc--even-grid">
       <blockquote class="bq bq--feature recirc__big">
         <p><a href="#">I came away amazed at how much people already have inside of themselves, how much creativity, but also how much anger and hurt and rage.</a></p>
-        <cite>Toussaint L'Overture</cite>
+        <cite>Toussaint L'Overture in <a href="#">Finding life and meaning after the war is over</a></cite>
       </blockquote>
     </section>
 
-    <section class="recirc">
+    <section class="recirc recirc--even-grid">
+      <p class="overline--min">Stories in <a href="#">First Person</a></p>
       {{> modules/tease-sm }}
       {{> modules/tease-sm }}
       {{> modules/tease-sm }}
@@ -25,6 +31,8 @@
       {{> modules/tease-sm }}
       {{> modules/tease-sm }}
     </section>
+
+    {{> modules/newsletter }}
 
   </section>
 

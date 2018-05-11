@@ -1,8 +1,13 @@
 {{#> layout }}
+  <div class="topic-hed">
+      <h1 class="topic-hed__title overline">Playlist</h1>
+      <p class="topic-hed__subtitle">Reinvention</p>
+    </div>
+
     <article class="article">
     {{> modules/hero type="fullscreen" overline="First Person"}}
 
-    <button class="btn--primary" data-article-toggle-btn="article-title-1">Read more</button>
+    <button class="btn--secondary" data-article-toggle-btn="article-title-1">Read more +</button>
     <div class="article--hidden" hidden data-article-toggle-content="article-title-1">
     {{> modules/article-text-content }}
     </div>
@@ -11,7 +16,7 @@
   <article class="article">
     {{> modules/hero type="fullscreen" overline="First Person"}}
 
-    <button class="btn--primary" data-article-toggle-btn="article-title-2">Read more</button>
+    <button class="btn--secondary" data-article-toggle-btn="article-title-2">Read more +</button>
     <div class="article--hidden" hidden data-article-toggle-content="article-title-2">
     {{> modules/article-text-content }}
     </div>
