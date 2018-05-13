@@ -26,11 +26,17 @@
       {{else}}
         <h1>{{#if headline}}{{headline}}{{else}}Water terrifies me. Here’s how I took the plunge.{{/if}}</h1>
       {{/if}}
-      <p>When we read them, books take us away from our lives. Years later, they’re vehicles for telling our own stories.</p>
+      {{#if news-dek}}
+      <p class="hero__news-dek">When we read them, books take us away from our lives. Years later, they’re vehicles for telling our own stories. Years later, they’re vehicles for telling our own stories. When Marco Rubio got heckled at a CNN Town Hall, books take us away from our lives. Years later, they’re vehicles for telling our own stories.When we read them, books take us away from our lives.</p>
+      {{else}}
+      <p class="hero__dek">When we read them, books take us away from our lives. Years later, they’re vehicles for telling our own stories.</p>
+      {{/if}}
+      {{#if byline}}
       <address>
         <p>By <a href="#">Joan Anderman</a></p>
         <p>Photos by <a href="#">Gretchen Ertl</a></p>
       </address>
+      {{/if}}
     </div>
   </div>
 {{#if subpage}}

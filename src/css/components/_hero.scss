@@ -114,3 +114,16 @@ $_hero-max-height: 80vh;
     }
   }
 }
+
+.hero__news-dek {
+  padding: $spacing-base 0;
+
+  &::before {
+    border-top: 3px solid $bg-color-tertiary;
+    content: "";
+    display: block;
+    margin: 0 auto;
+    padding-bottom: $spacing-base;
+    width: $spacing-xx-large;
+  }
+}

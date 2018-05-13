@@ -213,7 +213,7 @@ body {
       @include position(fixed, 0);
 
       overflow-y: auto;
-      padding: $spacing-medium 3rem;
+      padding: $spacing-medium $spacing-x-large;
     }
 
     main,
