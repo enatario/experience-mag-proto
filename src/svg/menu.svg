@@ -1,0 +1,19 @@
+<svg version="1.1" class="icon-open" id="icon-menu" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="12px" viewBox="242 209.4 16 12" enable-background="new 242 209.4 16 12" xml:space="preserve" aria-labelledby="menu-title">
+   <title id="menu-title">Explore the contents</title>
+
+<g class="icon-open__group">
+<line fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="247.167" y1="210.625" x2="256.625" y2="210.625"></line>
+<circle cx="243.255" cy="210.655" r="1.255"></circle>
+</g>
+
+<g class="icon-open__group">
+<line fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="247.167" y1="215.416" x2="256.625" y2="215.416"></line>
+<circle cx="243.255" cy="215.4" r="1.255"></circle>
+</g>
+
+<g class="icon-open__group">
+<line fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="247.167" y1="220.208" x2="256.625" y2="220.208"></line>
+<circle cx="243.255" cy="220.145" r="1.255"></circle>
+</g>
+
+</svg>
