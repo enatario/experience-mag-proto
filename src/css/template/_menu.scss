@@ -63,7 +63,9 @@
 }
 
 .site-menu__footer {
-  margin-top: auto;
+  border-top: 1px solid $bg-color-tertiary;
+  margin-top: $spacing-base;
+  padding-top: $spacing-base;
 
   cite {
     display: block;
@@ -124,18 +126,16 @@
 
   &:hover {
     &::before {
-      background-color: $bg-color-accent;
+      color: $text-color-accent;
+      transform: scale(1);
     }
   }
 
   &::before {
-    @include size($spacing-small);
-
-    border: 1px solid $bg-color-accent;
-    border-radius: 50%;
-    content: "";
+    content: "\2630";
     display: block;
     margin-right: $spacing-small;
+    transform: scale(0.75);
     transition: $transition-base;
   }
 }
@@ -157,6 +157,25 @@
 
 .site-menu__link-copy {
   font-family: $font-family-sans;
+
+  span {
+    font-size: $font-size-x-small;
+    margin-right: $spacing-small;
+    text-transform: uppercase;
+
+    &::after {
+      content: "\2E3A";
+    }
+  }
+
+  a {
+    color: $text-color-base;
+    font-weight: $font-weight-bold;
+
+    &:hover {
+      color: $text-color-accent;
+    }
+  }
 }
 
 .site-menu__social {
@@ -190,6 +209,13 @@ body {
     overflow: hidden;
     width: 100%;
 
+    > header {
+      @include position(fixed, 0);
+
+      overflow-y: auto;
+      padding: $spacing-medium 3rem;
+    }
+
     main,
     footer {
       display: none;
@@ -197,18 +223,8 @@ body {
 
     .site-menu__btn {
 
-      &:hover {
-        &::before {
-          background-color: transparent;
-          color: $text-color-accent;
-        }
-      }
-
       &::before {
-        border: 0;
-        content: "×";
-        height: auto;
-        width: auto;
+        content: "\2715";
       }
     }
   }
