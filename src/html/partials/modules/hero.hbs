@@ -22,9 +22,9 @@
       <p class="overline">{{overline}}</p>
       {{/if}}
       {{#if subpage}}
-        <a class="hero__title-link" href="#"><h2>Water terrifies me. Here’s how I took the plunge.</h2></a>
+        <a class="hero__title-link" href="#"><h2>{{#if headline}}{{headline}}{{else}}Water terrifies me. Here’s how I took the plunge.{{/if}}</h2></a>
       {{else}}
-        <h1>Water terrifies me. Here’s how I took the plunge.</h1>
+        <h1>{{#if headline}}{{headline}}{{else}}Water terrifies me. Here’s how I took the plunge.{{/if}}</h1>
       {{/if}}
       <p>When we read them, books take us away from our lives. Years later, they’re vehicles for telling our own stories.</p>
       <address>

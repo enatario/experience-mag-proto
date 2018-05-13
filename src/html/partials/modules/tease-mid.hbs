@@ -8,7 +8,7 @@
   </a>
     <p class="tz__copy">When we read them, books take us away from our lives. Years later, they’re vehicles for telling our own stories.</p>
     {{#if byline}}
-    <address class="byline">By <a href="#">Toussaint L'Overture</a></address>
+    <address class="byline">{{#if outside-ref}}Via <a href="#">{{outside-ref}}</a>{{else}}By <a href="#">Toussaint L'Overture</a>{{/if}}</address>
     {{/if}}
   </div>
   <a href="#" class="tz__link tz__media">

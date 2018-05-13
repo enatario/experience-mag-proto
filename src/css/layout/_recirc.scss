@@ -16,8 +16,18 @@
   }
 
   > * {
-    &:only-child {
+    &:only-of-type {
       grid-column: 1 / 4;
+      max-width: $width-base;
+    }
+  }
+
+  .overline--min:first-child {
+    grid-column: 1 / 4;
+    margin: 0 auto;
+
+    + .recirc__big {
+      grid-row: 2 / 4;
     }
   }
 }
