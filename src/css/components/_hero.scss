@@ -1,3 +1,5 @@
+$_hero-max-height: 80vh;
+
 .hero {
   display: flex;
   flex-direction: column;
@@ -62,8 +64,6 @@
 .hero--fullscreen {
   margin-bottom: $spacing-large;
 
-  $_hero-max-height: 80vh;
-
   @include breakpoint("medium") {
     padding: 0 $spacing-medium;
   }
@@ -87,49 +87,30 @@
 }
 
 .hero--homepage {
-  $_hero-max-height: 100vh;
-
-  background-color: $bg-color-gradient;
-  color: $text-color-inverse;
   margin-bottom: $spacing-x-large;
   position: relative;
 
   .hero__media {
     position: relative;
-
-    &:after {
-      @include position(absolute, null 0 0);
-
-      background-image: linear-gradient(to top, $bg-color-gradient, transparent);
-      content: "";
-      display: block;
-      height: 100%;
-    }
   }
 
   img {
     max-height: $_hero-max-height;
   }
 
-  .hero__title-link {
-    color: $text-color-inverse;
-
-    &:hover {
-      color: $text-color-accent;
-    }
-  }
-
   .hero__content {
 
     @include breakpoint("medium") {
-      @include position(absolute, null 0 0);
-
-      background-color: transparent;
-      margin-top: -($spacing-x-large);
+      @include position(absolute, 0 0 0 null)
     }
   }
 
   .hero__inner {
+    background-color: $bg-color-base;
     max-width: $width-base;
+
+    @include breakpoint("medium") {
+      padding: $spacing-x-large;
+    }
   }
 }
