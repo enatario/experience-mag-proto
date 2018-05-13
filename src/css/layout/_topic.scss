@@ -6,7 +6,6 @@
 }
 
 .topic-hed {
-  border-top: 3px solid $bg-color-secondary;
   display: flex;
   font-family: $font-family-sans;
   font-size: $font-size-copy;
@@ -16,15 +15,10 @@
 
 .topic-hed__title {
   font-weight: $font-weight-bold;
-  margin-right: $spacing-x-small;
-}
 
-.topic-hed__subtitle {
-  // font-family: $font-family-sans;
-  // font-size: $font-size-base-super;
-  // font-style: italic;
-
-  // @include breakpoint("medium") {
-  //   font-size: $font-size-large;
-  // }
+  &::after {
+    color: $bg-color-tertiary;
+    content: "\2E3A";
+    margin: 0 $spacing-small;
+  }
 }

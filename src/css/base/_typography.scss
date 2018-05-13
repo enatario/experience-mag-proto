@@ -85,11 +85,6 @@ a {
     &:hover {
       text-decoration: underline;
     }
-
-    blockquote &:hover {
-      color: $text-color-base;
-      text-decoration: none;
-    }
   }
 }
 
@@ -138,6 +133,15 @@ cite {
 
     @include breakpoint("medium") {
       font-size: $font-size-large;
+    }
+
+    a {
+      color: $text-color-base;
+
+      &:hover {
+        color: $text-color-accent;
+        text-decoration: none;
+      }
     }
   }
 
