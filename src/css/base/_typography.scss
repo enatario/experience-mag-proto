@@ -172,7 +172,7 @@ cite {
   margin-top: $spacing-x-large;
 
   &::after {
-    border-bottom: 1px solid $bg-color-tertiary;
+    border-bottom: 2px solid $bg-color-tertiary;
     content: "";
     display: block;
     margin-top: $spacing-base;
