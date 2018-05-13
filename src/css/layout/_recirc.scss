@@ -22,12 +22,14 @@
     }
   }
 
-  .overline--min:first-child {
-    grid-column: 1 / 4;
-    margin: 0 auto;
+  .overline--min {
+    &:first-child {
+      grid-column: 1 / 4;
+      margin: 0 auto;
 
-    + .recirc__big {
-      grid-row: 2 / 4;
+      + .recirc__big {
+        grid-row: 2 / 4;
+      }
     }
   }
 }
