@@ -3,9 +3,9 @@ This project was generated with [Skapa](https://github.com/enatario/skapa.git).
 
 
 ## Pre-reqs
-* [Node](https://nodejs.org/en/)
-* [Gulp](http://gulpjs.com/)
-* [Yarn](https://yarnpkg.com/en/)
+* **Install [Node](https://nodejs.org/en/):** do not use the latest version, but the latest *recommended* version
+* **Install [Yarn](https://yarnpkg.com/en/):** `brew install yarn`
+* **Install [Gulp](http://gulpjs.com/):** `npm install gulp -g`
 
 ## Basic setup
 Run `gulp`
