@@ -3,7 +3,6 @@
 
   background-color: $bg-color-base;
   border-top: 1px solid $bg-color-secondary;
-  padding: $spacing-base 0;
   width: 100%;
   z-index: get-z-index("ceiling");
 }
@@ -16,11 +15,15 @@
 .playlist-nav__item {
   flex: 1;
   font-family: $font-family-sans;
-  padding: 0 $spacing-base;
+  padding: $spacing-base;
   text-align: center;
 
   &:not(:last-child) {
     border-right: 1px solid $bg-color-tertiary;
+  }
+
+  &.is-currently-reading {
+    background-color: $bg-color-secondary;
   }
 }
 
