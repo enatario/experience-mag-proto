@@ -19,12 +19,12 @@
   <div class="hero__content">
     <div class="hero__inner">
       {{#if overline}}
-        {{#if subpage}}<a href="#" class="btn--primary overline"><p>{{overline}}</p></a>{{else}}<p class="overline">{{overline}}</p>{{/if}}
+        {{#if overline-link}}<a href="#" class="btn--primary overline"><p>{{overline}}</p></a>{{else}}<p class="overline">{{overline}}</p>{{/if}}
       {{/if}}
       {{#if subpage}}
-        <a class="hero__title-link" href="#"><h2>{{#if headline}}{{headline}}{{else}}Water terrifies me. Here’s how I took the plunge.{{/if}}</h2></a>
+        <a class="hero__title-link" href="#"><h2 data-article-hed>{{#if headline}}{{headline}}{{else}}Water terrifies me. Here’s how I took the plunge.{{/if}}</h2></a>
       {{else}}
-        <h1>{{#if headline}}{{headline}}{{else}}Water terrifies me. Here’s how I took the plunge.{{/if}}</h1>
+        <h1 data-article-hed>{{#if headline}}{{headline}}{{else}}Water terrifies me. Here’s how I took the plunge.{{/if}}</h1>
       {{/if}}
       {{#if news-dek}}
       <p class="hero__news-dek">When we read them, books take us away from our lives. Years later, they’re vehicles for telling our own stories. Years later, they’re vehicles for telling our own stories. When Marco Rubio got heckled at a CNN Town Hall, books take us away from our lives. Years later, they’re vehicles for telling our own stories.When we read them, books take us away from our lives.</p>

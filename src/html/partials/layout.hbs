@@ -10,7 +10,7 @@
 		{{> base/base-favicon }}
 		
 	</head>
-	<body>
+	<body data-page-type="{{#if type}}{{type}}{{/if}}">
 		{{> base/base-header }}
 		<main id="content">
 			{{> @partial-block }}

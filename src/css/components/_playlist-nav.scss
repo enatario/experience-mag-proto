@@ -1,0 +1,35 @@
+.playlist-nav {
+  @include position(fixed, null 0 0 0);
+
+  background-color: $bg-color-base;
+  border-top: 1px solid $bg-color-secondary;
+  padding: $spacing-base 0;
+  width: 100%;
+  z-index: get-z-index("ceiling");
+}
+
+.playlist-nav__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.playlist-nav__item {
+  flex: 1;
+  font-family: $font-family-sans;
+  padding: 0 $spacing-base;
+  text-align: center;
+
+  &:not(:last-child) {
+    border-right: 1px solid $bg-color-tertiary;
+  }
+}
+
+.playlist-nav__overline {
+  font-size: $font-size-x-small;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.playlist-nav__link {
+  font-weight: $font-weight-bold;
+}

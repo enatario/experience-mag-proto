@@ -7,6 +7,7 @@ import annotations from "./annotations.js"
 import playlist from "./playlist"
 import picturefill from "picturefill"
 import lazysizes from "lazysizes"
+import smooth from "smooth-scroll"
 
 // Utils
 removeMobileHover()
@@ -18,6 +19,8 @@ shareQuote()
 audio()
 annotations()
 playlist()
+
+new smooth('a[href*="#"]')
 
 // Add class to html if JS is loaded
 document.querySelector("html").classList.add("js-is-loaded")

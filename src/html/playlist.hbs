@@ -1,25 +1,28 @@
-{{#> layout }}
+{{#> layout type="playlist"}}
   <div class="topic-hed">
       <p class="topic-hed__title">Playlist</p>
       <p class="topic-hed__subtitle">Reinvention</p>
     </div>
 
     <article class="article">
-    {{> modules/hero type="fullscreen" byline=true subpage=true overline="First Person"}}
-
-    <button class="btn--secondary" data-article-toggle-btn="article-title-1">Read more +</button>
-    <div class="article--hidden" hidden data-article-toggle-content="article-title-1">
+    {{> modules/hero type="fullscreen" byline=true overline="First Person" overline-link=true}}
     {{> modules/article-text-content }}
-    </div>
   </article>
 
   <article class="article">
-    {{> modules/hero type="fullscreen" byline=true subpage=true overline="First Person"}}
-
-    <button class="btn--secondary" data-article-toggle-btn="article-title-2">Read more +</button>
-    <div class="article--hidden" hidden data-article-toggle-content="article-title-2">
+    {{> modules/hero type="fullscreen" headline="60 minutes. 
+150 meals. Go!" byline=true overline="First Person" overline-link=true}}
     {{> modules/article-text-content }}
-    </div>
   </article>
+
+  <article class="article">
+    {{> modules/hero type="fullscreen" headline="To be single and roaming the Costco aisles" byline=true overline="First Person" overline-link=true}}
+    {{> modules/article-text-content }}
+  </article>
+
+  <div class="playlist-nav" data-playlist-nav hidden>
+    <ul class="playlist-nav__list" data-playlist-list>
+    </ul>
+  </div>
 
 {{/layout}}

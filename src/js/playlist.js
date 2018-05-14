@@ -1,31 +1,57 @@
-import { select, selectAll, hasClass, removeClass, addClass } from './utils/dom'
+import { select, selectAll } from './utils/dom'
+import inView from "in-view"
 
-const plBtns = selectAll("[data-article-toggle-btn]")
+const body = select("body")
+const playlistNav = select("[data-playlist-nav]")
+const playlistList = select("[data-playlist-list]")
 
-const revealArticle = () => {
+const playlist = () => {
 
-  if (plBtns) {
+  const pageId = body.getAttribute("data-page-type")
 
-    plBtns.forEach(btn => {
-      const id = btn.getAttribute("data-article-toggle-btn")
-      const article = select(`[data-article-toggle-content=${id}]`)
+  if (pageId == "playlist") {
 
-      btn.addEventListener("click", () => {
-        const isHidden = article.hasAttribute("hidden")
+    const headlines = selectAll("[data-article-hed]")
 
-        if (!isHidden) {
-          article.setAttribute("hidden", "")
-          btn.innerHTML = "Read more +"
-        }
+    headlines.forEach((hed, index) => {
+      const article = hed.closest("article")
+      const hedText = hed.innerHTML
+      const slug = hedText
+                      .replace(/\s+/g, "-")
+                      .replace(/\./g,"")
+                      .replace(/\’/g,"")
+                      .replace(/\!/g,"")
+                      .toLowerCase()
 
-        else {
-          article.removeAttribute("hidden")
-          btn.innerHTML = "Collapse story -"
-        }
-      })
+      article.setAttribute("id", slug)
+      index = index + 1
+
+      const playlistInner =
+        `<li class="playlist-nav__item">
+          <p class="playlist-nav__overline">Story ${index}</p>
+          <a class="playlist-nav__link" href="#${slug}">${hedText}</a>
+        </li>`
+
+      return playlistList.innerHTML += playlistInner
 
     })
   }
+
+  const playlistIsHidden = playlistNav.hasAttribute("hidden")
+
+  inView("[data-article-content]")
+    .on("enter", () => {
+      if (playlistIsHidden) {
+        playlistNav.removeAttribute("hidden")
+      }
+    })
+
+  inView("[data-site-footer]")
+    .on("enter", () => {
+      if (!playlistIsHidden) {
+        playlistNav.setAttribute("hidden", "")
+      }
+    })
 }
 
-export default revealArticle
+export default playlist
