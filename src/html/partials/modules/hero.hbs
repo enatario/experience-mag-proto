@@ -19,7 +19,7 @@
   <div class="hero__content">
     <div class="hero__inner">
       {{#if overline}}
-      <p class="overline">{{overline}}</p>
+        {{#if subpage}}<a href="#" class="btn--primary overline"><p>{{overline}}</p></a>{{else}}<p class="overline">{{overline}}</p>{{/if}}
       {{/if}}
       {{#if subpage}}
         <a class="hero__title-link" href="#"><h2>{{#if headline}}{{headline}}{{else}}Water terrifies me. Here’s how I took the plunge.{{/if}}</h2></a>
