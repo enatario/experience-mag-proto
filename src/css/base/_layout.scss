@@ -20,7 +20,8 @@ footer {
 main {
   margin-bottom: $spacing-large;
 
-  > section {
+  > section,
+  .article-content {
     &:not(.hero) {
       margin-left: auto;
       margin-right: auto;
