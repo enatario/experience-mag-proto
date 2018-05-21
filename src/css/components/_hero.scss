@@ -101,7 +101,7 @@ $_hero-max-height: 80vh;
   .hero__content {
 
     @include breakpoint("medium") {
-      @include position(absolute, $spacing-medium $spacing-medium $spacing-medium null)
+      @include position(absolute, $spacing-medium $spacing-medium $spacing-medium null);
 
       background-color: rgba($bg-color-base, 0.95);
     }
@@ -112,6 +112,18 @@ $_hero-max-height: 80vh;
 
     @include breakpoint("medium") {
       padding: $spacing-medium;
+    }
+  }
+}
+
+.hero--inset-reverse {
+  @extend .hero--inset;
+
+  .hero__content {
+
+    @include breakpoint("medium") {
+      @include position(absolute, $spacing-medium auto $spacing-medium $spacing-medium);
+
     }
   }
 }

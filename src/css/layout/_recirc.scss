@@ -40,6 +40,10 @@
   @include breakpoint("small") {
     grid-column: 1 / 3;
     grid-row: 1 / 4;
+
+    .recirc--layout-grid-reverse & {
+      grid-column: 2 / 4;
+    }
   }
 }
 
@@ -51,6 +55,10 @@
       grid-column: auto;
     }
   }
+}
+
+.recirc--layout-grid-reverse {
+  @extend .recirc--layout-grid;
 }
 
 .recirc--even-grid {
