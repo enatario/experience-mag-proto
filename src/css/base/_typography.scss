@@ -193,11 +193,9 @@ cite {
 }
 
 .overline--topic {
-  display: inline-block;
-  font-family: $font-family-sans;
-  font-weight: $font-weight-bold;
-  margin-bottom: $spacing-base;
-  padding-top: $spacing-x-small;
+  @extend .overline;
+
+  font-size: $font-size-small;
 }
 
 .overline--min {

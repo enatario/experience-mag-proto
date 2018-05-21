@@ -6,6 +6,7 @@
 }
 
 .topic-hed {
+  align-items: center;
   display: flex;
   font-family: $font-family-sans;
   font-size: $font-size-base-plus;
@@ -13,12 +14,7 @@
   padding-top: $spacing-base;
 }
 
-.topic-hed__title {
-  font-weight: $font-weight-bold;
-
-  &::after {
-    color: $bg-color-tertiary;
-    content: "\2014";
-    margin: 0 $spacing-small;
-  }
+.topic-hed__subtitle {
+  font-size: $font-size-base;
+  margin-left: $spacing-base;
 }
