@@ -5,7 +5,7 @@
   width: 100%;
 
   @include breakpoint("medium") {
-    flex-direction: row;
+    display: none;
   }
 
   .js-is-loaded & {
@@ -126,6 +126,10 @@
   justify-content: center;
   min-width: $spacing-x-large;
 
+  @include breakpoint("medium") {
+    display: none;
+  }
+
   &:hover {
     line {
       stroke: $text-color-accent;
@@ -174,25 +178,6 @@
 
 .site-menu__link-copy {
   font-family: $font-family-sans;
-
-  span {
-    font-size: $font-size-x-small;
-    margin-right: $spacing-small;
-    text-transform: uppercase;
-
-    &::after {
-      content: "\2014";
-    }
-  }
-
-  a {
-    color: $text-color-base;
-    font-weight: $font-weight-bold;
-
-    &:hover {
-      color: $text-color-accent;
-    }
-  }
 }
 
 .site-menu__social {
