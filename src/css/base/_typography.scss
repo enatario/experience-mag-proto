@@ -127,12 +127,12 @@ cite {
 
   p {
     font-family: $font-family-display;
-    font-size: $font-size-medium;
+    font-size: $font-size-base-plus;
     font-style: italic;
     font-weight: $font-weight-bold;
 
     @include breakpoint("medium") {
-      font-size: $font-size-large;
+      font-size: $font-size-medium;
     }
 
     a {
