@@ -123,16 +123,14 @@
 .site-menu__btn {
   align-items: center;
   display: flex;
+  justify-content: center;
+  min-width: $spacing-x-large;
 
   &:hover {
     line {
       stroke: $text-color-accent;
       transition: $transition-base;
     }
-  }
-
-  svg {
-    margin-right: $spacing-small;
   }
 }
 
