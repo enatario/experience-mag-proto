@@ -38,7 +38,11 @@
   display: none;
 
   @include breakpoint("medium") {
-    display: block;
+    display: flex;
+  }
+
+  .site-menu__social {
+    margin-left: $spacing-medium;
   }
 }
 
