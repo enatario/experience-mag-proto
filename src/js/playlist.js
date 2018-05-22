@@ -1,12 +1,13 @@
-import { select, selectAll } from './utils/dom'
-import inView from "in-view"
+import { select, selectAll, addClass, removeClass, hasClass } from "./utils/dom"
 
 const body = select("body")
+const pageId = body.getAttribute("data-page-type")
 const playlistNav = select("[data-playlist-nav]")
 const playlistList = select("[data-playlist-list]")
-const pageId = body.getAttribute("data-page-type")
+const plBtns = selectAll("[data-article-toggle-btn]")
+const showAllBtn = select("[data-article-toggle-all]")
 
-const playlist = () => {
+const createPlaylistNav = () => {
 
   const headlines = selectAll("[data-article-hed]")
 
@@ -30,7 +31,52 @@ const playlist = () => {
       </li>`
 
     return playlistList.innerHTML += playlistInner
+  })
+}
 
+const revealArticle = () => {
+  plBtns.forEach(btn => {
+    const id = btn.getAttribute("data-article-toggle-btn")
+    const article = select(`[data-article-toggle-content=${id}]`)
+
+    btn.addEventListener("click", () => {
+      article.removeAttribute("hidden")
+      addClass(btn, "is-hidden")
+    })
+  })
+}
+
+const revealAll = () => {
+  showAllBtn.addEventListener("click", () => {
+    const allArticlesCollapsed = hasClass(showAllBtn, "playlist-is-collapsed")
+
+    if (allArticlesCollapsed) {
+      removeClass(showAllBtn, "playlist-is-collapsed")
+      showAllBtn.innerHTML = "Collapse all stories"
+
+      const articles = selectAll("[data-article-toggle-content]")
+      articles.forEach(article => {
+        article.removeAttribute("hidden")
+      })
+
+      plBtns.forEach(btn => {
+        addClass(btn, "is-hidden")
+      })
+    }
+
+    else {
+      addClass(showAllBtn, "playlist-is-collapsed")
+      showAllBtn.innerHTML = "Show all stories"
+
+      const articles = selectAll("[data-article-toggle-content]")
+      articles.forEach(article => {
+        article.setAttribute("hidden", "")
+      })
+
+      plBtns.forEach(btn => {
+        removeClass(btn, "is-hidden")
+      })
+    }
   })
 }
 
@@ -38,23 +84,9 @@ const init = () => {
 
   if (pageId == "playlist") {
 
-    playlist()
-
-    const playlistIsHidden = playlistNav.hasAttribute("hidden")
-
-    inView("[data-article-content]")
-      .on("enter", () => {
-        if (playlistIsHidden) {
-          playlistNav.removeAttribute("hidden")
-        }
-      })
-
-    inView("[data-site-footer]")
-      .on("enter", () => {
-        if (!playlistIsHidden) {
-          playlistNav.setAttribute("hidden", "")
-        }
-      })
+    createPlaylistNav()
+    revealArticle()
+    revealAll()
   }
 }
 

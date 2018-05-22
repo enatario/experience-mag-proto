@@ -6204,6 +6204,10 @@ smooth-scroll@^12.1.5:
   version "12.1.5"
   resolved "https://registry.yarnpkg.com/smooth-scroll/-/smooth-scroll-12.1.5.tgz#b6d8deca371a9edd5ea3ad291ef0fb7e741ed41e"
 
+smoothscroll@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/smoothscroll/-/smoothscroll-0.4.0.tgz#40e507b46461408ba1b787d0081e1e883c4124a5"
+
 snake-case@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/snake-case/-/snake-case-2.1.0.tgz#41bdb1b73f30ec66a04d4e2cad1b76387d4d6d9f"

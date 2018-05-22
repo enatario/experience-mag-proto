@@ -7,9 +7,22 @@
   z-index: get-z-index("ceiling");
 }
 
+.playlist-nav__btn {
+  display: block;
+  margin: $spacing-base auto;
+
+  @include breakpoint("medium") {
+    display: none;
+  }
+}
+
 .playlist-nav__list {
-  display: flex;
-  justify-content: space-between;
+  display: none;
+
+  @include breakpoint("medium") {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .playlist-nav__item {
@@ -35,4 +48,24 @@
 
 .playlist-nav__link {
   font-weight: $font-weight-bold;
+}
+
+article:target {
+
+  button[data-article-toggle-btn] {
+    display: none;
+  }
+
+  div[data-article-toggle-content] {
+    display: block;
+  }
+}
+
+button[data-article-toggle-btn] {
+  display: block;
+  margin: 0 auto;
+
+  &.is-hidden {
+    display: none;
+  }
 }

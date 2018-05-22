@@ -1,26 +1,35 @@
 {{#> layout type="playlist"}}
   <div class="topic-hed">
-      <p class="overline--topic">Playlist</p>
-      <p class="topic-hed__subtitle">Reinvention</p>
+    <p class="overline--topic">Playlist</p>
+    <p class="topic-hed__subtitle">Reinvention</p>
+  </div>
+
+  <article class="article">
+    {{> modules/hero type="fullscreen" byline=true overline="First Person" overline-link=true }}
+    <button class="btn--secondary" data-article-toggle-btn="article-title-1">Read more +</button>
+    <div hidden data-article-toggle-content="article-title-1">
+      {{> modules/article-text-content }}
     </div>
-
-    <article class="article">
-    {{> modules/hero type="fullscreen" byline=true overline="First Person" overline-link=true}}
-    {{> modules/article-text-content }}
   </article>
 
   <article class="article">
-    {{> modules/hero type="fullscreen" headline="60 minutes. 
-150 meals. Go!" byline=true overline="First Person" overline-link=true}}
-    {{> modules/article-text-content }}
+    {{> modules/hero type="fullscreen" byline=true overline="Ideas" overline-link=true headline="60 minutes. 150 meals. Go!"}}
+    <button class="btn--secondary" data-article-toggle-btn="article-title-2">Read more +</button>
+    <div hidden data-article-toggle-content="article-title-2">
+      {{> modules/article-text-content }}
+    </div>
   </article>
 
   <article class="article">
-    {{> modules/hero type="fullscreen" headline="To be single and roaming the Costco aisles" byline=true overline="First Person" overline-link=true}}
-    {{> modules/article-text-content }}
+    {{> modules/hero type="fullscreen" byline=true overline="In the news" overline-link=true headline="Finding life and meaning after the war is over"}}
+    <button class="btn--secondary" data-article-toggle-btn="article-title-3">Read more +</button>
+    <div hidden data-article-toggle-content="article-title-3">
+      {{> modules/article-text-content }}
+    </div>
   </article>
 
-  <div class="playlist-nav" data-playlist-nav hidden>
+  <div class="playlist-nav" data-playlist-nav>
+    <button data-article-toggle-all class="playlist-nav__btn playlist-is-collapsed btn--secondary">Show all stories</button>
     <ul class="playlist-nav__list" data-playlist-list>
     </ul>
   </div>
