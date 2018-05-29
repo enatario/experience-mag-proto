@@ -17,3 +17,13 @@
     box-shadow: 0 0 0 0 transparent;
   }
 }
+
+@keyframes slide-in {
+  from {
+    transform: translateY(10rem);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}

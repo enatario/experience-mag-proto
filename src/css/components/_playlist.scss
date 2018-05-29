@@ -5,24 +5,17 @@
   border-top: 1px solid $bg-color-secondary;
   width: 100%;
   z-index: get-z-index("ceiling");
+  transition: $transition-base;
+
+  &:not([hidden]) {
+    animation: slide-in 0.25s forwards;
+  }
 }
 
 .playlist-nav__btn {
   display: block;
   margin: $spacing-base auto;
 
-  @include breakpoint("medium") {
-    display: none;
-  }
-}
-
-.playlist-nav__list {
-  display: none;
-
-  @include breakpoint("medium") {
-    display: flex;
-    justify-content: space-between;
-  }
 }
 
 .playlist-nav__item {
