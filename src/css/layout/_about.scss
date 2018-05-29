@@ -1,3 +1,9 @@
+.about {
+  &:not(:last-child) {
+    margin-bottom: $spacing-xx-large;
+  }
+}
+
 .about__hed {
   font-size: $font-size-xx-large;
   margin-bottom: $spacing-large;
