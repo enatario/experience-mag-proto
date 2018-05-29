@@ -1,0 +1,18 @@
+.about__hed {
+  font-size: $font-size-xx-large;
+  margin-bottom: $spacing-large;
+}
+
+.about__copy {
+
+  @include breakpoint("small") {
+    column-count: 3;
+    column-gap: $spacing-large;
+  }
+
+  p {
+    &:not(:last-child) {
+      margin-bottom: $spacing-base;
+    }
+  }
+}
