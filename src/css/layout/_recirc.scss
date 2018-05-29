@@ -24,7 +24,6 @@
 
   .overline--min {
     &:first-child {
-      grid-column: 1 / 4;
       margin: 0 auto;
 
       + .recirc__big {
@@ -62,6 +61,8 @@
 }
 
 .recirc--even-grid {
+  grid-auto-flow: row;
+
   .overline--min {
     grid-column: 1 / 3;
 
