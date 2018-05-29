@@ -56,7 +56,7 @@ article:target {
 
 button[data-article-toggle-btn] {
   display: block;
-  margin: 0 auto;
+  margin: -$spacing-base auto 0;
 
   &.is-hidden {
     display: none;
