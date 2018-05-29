@@ -35,7 +35,18 @@ button {
 
   &:hover {
     box-shadow: 5px 5px 0 0 $bg-color-accent;
+
+    svg {
+      fill: $text-color-base;
+    }
   }
+}
+
+.btn--tertiary {
+  @extend %btn;
+
+  color: $text-color-accent;
+  fill: $text-color-accent;
 }
 
 .btn--form {
@@ -46,20 +57,5 @@ button {
 
   &:hover {
     background-color: $color-offblack;
-  }
-}
-
-.btn--tweet {
-
-  &:hover {
-    svg {
-      fill: $text-color-base;
-    }
-  }
-
-  svg {
-    fill: $bg-color-base;
-    height: 0.75rem;
-    transition: $transition-base;
   }
 }

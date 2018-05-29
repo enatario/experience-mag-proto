@@ -40,10 +40,6 @@
   @include breakpoint("medium") {
     display: flex;
   }
-
-  .site-menu__social {
-    margin-left: $spacing-medium;
-  }
 }
 
 .site-header__nav-list {

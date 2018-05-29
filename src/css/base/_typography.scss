@@ -125,6 +125,19 @@ cite {
     }
   }
 
+  a {
+    display: inline-block;
+    margin-right: $spacing-medium;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    svg {
+      margin-right: $spacing-x-small;
+    }
+  }
+
   p {
     font-family: $font-family-display;
     font-size: $font-size-base-plus;
