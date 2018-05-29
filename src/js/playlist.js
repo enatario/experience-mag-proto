@@ -5,12 +5,12 @@ const pageId = body.getAttribute("data-page-type")
 const playlistNav = select("[data-playlist-nav]")
 const plBtns = selectAll("[data-article-toggle-btn]")
 const showAllBtn = select("[data-article-toggle-all]")
-const navIsHidden = playlistNav.hasAttribute("hidden")
 const articles = selectAll("[data-article-toggle-content]")
 
 
 
 const revealArticle = () => {
+  const navIsHidden = playlistNav.hasAttribute("hidden")
 
   plBtns.forEach(btn => {
     const id = btn.getAttribute("data-article-toggle-btn")
