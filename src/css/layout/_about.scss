@@ -116,7 +116,7 @@
   }
 
   h2 {
-    &:not(:first-child) {
+    &:not(:first-of-type) {
       margin-top: $spacing-large;
     }
   }
