@@ -1,11 +1,11 @@
 {{#> layout type="playlist"}}
   <div class="topic-hed">
     <p class="overline--topic">Playlist</p>
-    <p class="topic-hed__subtitle">Reinvention</p>
+    <p class="topic-hed__subtitle">3 stories about Reinvention</p>
   </div>
 
   <article class="article">
-    {{> modules/hero type="fullscreen" byline=true overline="First Person" overline-link=true }}
+    {{> modules/hero type="fullscreen" byline=true overline="First Person" overline-link=true img="pl-1" }}
     <button class="btn--secondary" data-article-toggle-btn="article-title-1">Read story</button>
     <div hidden data-article-toggle-content="article-title-1">
       {{> modules/article-text-content }}
@@ -13,7 +13,7 @@
   </article>
 
   <article class="article">
-    {{> modules/hero type="fullscreen" byline=true overline="Ideas" overline-link=true headline="60 minutes. 150 meals. Go!"}}
+    {{> modules/hero type="fullscreen" byline=true overline="Ideas" overline-link=true headline="60 minutes. 150 meals. Go!" img="pl-2"}}
     <button class="btn--secondary" data-article-toggle-btn="article-title-2">Read story</button>
     <div hidden data-article-toggle-content="article-title-2">
       {{> modules/article-text-content }}
@@ -21,15 +21,22 @@
   </article>
 
   <article class="article">
-    {{> modules/hero type="fullscreen" byline=true overline="In the news" overline-link=true headline="Finding life and meaning after the war is over"}}
+    {{> modules/hero type="fullscreen" byline=true overline="In the news" overline-link=true headline="Finding life and meaning after the war is over" img="pl-3"}}
     <button class="btn--secondary" data-article-toggle-btn="article-title-3">Read story</button>
     <div hidden data-article-toggle-content="article-title-3">
       {{> modules/article-text-content }}
     </div>
   </article>
 
+  <section class="recirc recirc--layout-grid">
+      {{> modules/tease-mid recircclass="recirc__big" byline=true overline-link=true overline="In the News" headline="Water terrifies me. Here’s how I took the plunge."}}
+      <p class="overline--min">Stories in <a href="#">First Person</a></p>
+      {{> modules/tease-sm }}
+      {{> modules/tease-sm}}
+    </section>
+
   <div class="playlist-nav" data-playlist-nav hidden>
-    <button data-article-toggle-all class="playlist-nav__btn playlist-is-collapsed btn--secondary">Show playlist contents</button>
+    <button data-article-toggle-all class="playlist-nav__btn playlist-is-collapsed btn--secondary">Playlist: Show All Reinvention</button>
   </div>
 
 {{/layout}}

@@ -8,11 +8,11 @@
     <figure>
       <picture>
         <!--[if IE 9]><video style='display: none;'><![endif]-->
-          <source data-srcset="/assets/images/article-1-1_1200.jpg" media="(min-width:853px)">
-          <source data-srcset="/assets/images/article-1-1_900.jpg" media="(min-width:600px)">
-          <source data-srcset="/assets/images/article-1-1_650.jpg" media="(min-width:1px)">
+          <source data-srcset="/assets/images/{{#if img}}{{img}}{{else}}article-1-1{{/if}}_1200.jpg" media="(min-width:853px)">
+          <source data-srcset="/assets/images/{{#if img}}{{img}}{{else}}article-1-1{{/if}}_900.jpg" media="(min-width:600px)">
+          <source data-srcset="/assets/images/{{#if img}}{{img}}{{else}}article-1-1{{/if}}_650.jpg" media="(min-width:1px)">
           <!--[if IE 9]></video><![endif]-->
-          <img class="lazyload" src="/assets/images/article-1-1_placeholder.jpg" data-srcset="/assets/images/article-1-1_placeholder.jpg" alt="">
+          <img class="lazyload" src="/assets/images/{{#if img}}{{img}}{{else}}article-1-1{{/if}}_placeholder.jpg" data-srcset="/assets/images/article-1-1_placeholder.jpg" alt="">
       </picture>
     </figure>
   </div>
