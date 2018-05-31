@@ -61,6 +61,16 @@ $_hero-max-height: 80vh;
   }
 }
 
+.hero--spread-reverse {
+  @extend .hero--spread;
+
+  .hero__media {
+    @include breakpoint("medium") {
+      order: 2;
+    }
+  }
+}
+
 .hero--fullscreen {
   margin-bottom: $spacing-large;
 
