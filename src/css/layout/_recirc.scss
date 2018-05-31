@@ -23,8 +23,14 @@
   }
 
   .overline--min {
+    text-align: center;
+
     &:first-child {
       margin: 0 auto;
+
+      @include breakpoint("small") {
+        grid-column: 1 / 4;
+      }
 
       + .recirc__big {
         grid-row: 2 / 4;
@@ -65,9 +71,5 @@
 
   .overline--min {
     grid-column: 1 / 3;
-
-    @include breakpoint("small") {
-      grid-column: 1 / 4;
-    }
   }
 }
