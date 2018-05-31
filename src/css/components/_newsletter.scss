@@ -1,8 +1,18 @@
 .newsletter {
-  background-color: $bg-color-secondary;
-  margin: $spacing-base auto;
   max-width: $width-base;
   padding: $spacing-base;
+}
+
+.newsletter--inline {
+  background-color: $bg-color-secondary;
+  margin: $spacing-base auto;
+}
+
+.newsletter--footer {
+  background-color: $bg-color-base;
+  border: 1px solid $bg-color-secondary;
+  box-shadow: 0 0 0 10px $bg-color-base;
+  margin: -$spacing-x-large auto $spacing-base;
 }
 
 .newsletter__title {
@@ -31,6 +41,14 @@
 
   input {
     margin-top: $spacing-small;
+
+    .newsletter--footer & {
+      background-color: $bg-color-secondary;
+
+      &:focus {
+        background-color: $bg-color-base;
+      }
+    }
   }
 
   button {

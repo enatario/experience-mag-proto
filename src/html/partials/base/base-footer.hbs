@@ -1,22 +1,48 @@
 <footer class="site-footer" data-site-footer>
-  <nav class="site-header__nav">
-    <ul class="site-header__nav-list">
-      <li class="site-header__nav-item">
-        <a class="site-header__nav-link" href="/">First Person</a>
+  {{> modules/newsletter footer=true}}
+
+  <div class="site-footer__inner site-footer__inner--meta">
+    <a class="site-header__logo" href="/">
+      @@include("logo.svg")
+    </a>
+    <ul class="site-footer__social">
+      <li>
+        <a href="#">@@include("twitter.svg")</a>
       </li>
-      <li class="site-header__nav-item">
-        <a class="site-header__nav-link" href="/">Ideas</a>
+      <li>
+        <a href="#">@@include("facebook.svg")</a>
       </li>
-      <li class="site-header__nav-item">
-        <a class="site-header__nav-link" href="/">In the News</a>
+    </ul>
+  </div>
+
+  <hr class="site-footer__divider">
+
+  <div class="site-footer__inner">
+    <div class="site-footer__about">
+      <h2>Jump In</h2>
+      <p>That’s our motto, our credo, our exhortation. Experience is a digital magazine that examines the power of experience to spark ideas, solve problems, transform industries, and drive personal growth. Our stories will invite readers to understand the experiences of others, challenge assumptions, and break through the bubbles that too often persist in culture and civic life. They’ll promote a spirit of doing, growing, taking leaps, embracing the new. Experience is published by Northeastern University. <a href="/">Learn more about us.</a></p>
+    </div>
+
+    <nav class="site-footer__nav">
+      <h2>Sections</h2>
+    <ul class="site-footer__nav-list">
+      <li class="site-footer__nav-item">
+        <a class="site-footer__nav-link" href="/">First Person</a>
       </li>
-      <li class="site-header__nav-item">
-        <a class="site-header__nav-link" href="/">Playlists</a>
+      <li class="site-footer__nav-item">
+        <a class="site-footer__nav-link" href="/">Ideas</a>
       </li>
-      <li class="site-header__nav-item">
-        <a class="site-header__nav-link" href="/">About</a>
+      <li class="site-footer__nav-item">
+        <a class="site-footer__nav-link" href="/">In the News</a>
+      </li>
+      <li class="site-footer__nav-item">
+        <a class="site-footer__nav-link" href="/">Playlists</a>
+      </li>
+      <li class="site-footer__nav-item">
+        <a class="site-footer__nav-link" href="/">About</a>
       </li>
     </ul>
   </nav>
-  <p>&copy; 2018 <a href="www.northeastern.edu">Northeastern University</a></p>
+  </div>
+  {{!-- <p>&copy; 2018 <a href="www.northeastern.edu">Northeastern University</a></p> --}}
 </footer>
