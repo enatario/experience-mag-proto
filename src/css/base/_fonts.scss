@@ -22,7 +22,7 @@
   font-weight: 700;
 }
 
-@include font-face("Grifo", $dir-font + "Grifo-Black-Italic") {
+@include font-face("Grifo", $dir-font + "Grifo-Bold-Italic") {
   font-display: swap;
   font-style: italic;
   font-weight: 700;
