@@ -39,8 +39,26 @@ const hoverImage = () => {
 
 }
 
+const hoverAboutImage = () => {
+
+  const aboutLinks = selectAll("[data-about-link]")
+  const aboutBg = select("[data-about-bg]")
+
+  aboutLinks.forEach((link, index) => {
+    
+    index = index + 1
+
+    link.addEventListener("mouseover", () => {
+      aboutBg.style.backgroundImage = `url(/assets/images/menu-${index}.jpg)`
+    })
+
+  })
+
+}
+
 const init = () => {
   revealMenu()
   hoverImage()
+  hoverAboutImage()
 }
 export default init

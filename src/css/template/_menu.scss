@@ -1,11 +1,9 @@
 .site-menu {
-  display: flex;
-  flex-direction: column;
   transition: opacity 0.2s linear;
-  width: 100%;
 
   @include breakpoint("medium") {
     display: none;
+    height: 0;
   }
 
   .js-is-loaded & {
@@ -49,77 +47,6 @@
   }
 }
 
-.site-menu__about {
-  background-color: $bg-color-secondary;
-  order: 2;
-
-  @include breakpoint("medium") {
-    order: 1;
-  }
-
-  .overline--min {
-    border-bottom-color: $bg-color-tertiary;
-  }
-}
-
-.site-menu__footer {
-  border-top: 1px solid $bg-color-tertiary;
-  margin-top: $spacing-base;
-  padding-top: $spacing-base;
-
-  cite {
-    display: block;
-    font-family: $font-family-sans;
-    font-size: $font-size-x-small;
-    font-weight: $font-weight-bold;
-    letter-spacing: 2px;
-    margin-top: $spacing-base;
-    text-transform: uppercase;
-  }
-}
-
-.site-menu__nav {
-  order: 1;
-  position: relative;
-
-  @include breakpoint("medium") {
-    order: 2;
-  }
-}
-
-.site-menu__hover-image {
-  @include position(absolute, 0);
-
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.4;
-  pointer-events: none;
-  transition: background-image 0.2s ease;
-  z-index: get-z-index("basement");
-}
-
-.site-menu__list-item {
-
-  &:not(:last-child) {
-    margin-bottom: $spacing-medium;
-  }
-}
-
-.site-menu__inner {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  margin: 0 auto;
-  max-width: $width-small;
-
-  > * {
-    &:not(:last-child) {
-      margin-bottom: $spacing-base;
-    }
-  }
-}
-
 .site-menu__btn {
   align-items: center;
   display: flex;
@@ -159,49 +86,6 @@
 
 .icon-close {
   display: none;
-}
-
-.site-menu__link {
-  font-family: $font-family-display;
-  font-size: $font-size-large;
-  font-weight: $font-weight-bold;
-  line-height: $line-height-tight;
-
-  @include breakpoint("medium") {
-    font-size: $font-size-xx-large;
-  }
-
-  &:hover {
-    color: $text-color-accent;
-  }
-}
-
-.site-menu__link-copy {
-  font-family: $font-family-sans;
-}
-
-.site-menu__social {
-  display: flex;
-
-  li {
-    margin-right: $spacing-base;
-  }
-
-  a {
-    display: block;
-
-    &:hover {
-      svg {
-        fill: $color-offblack;
-      }
-    }
-  }
-
-  svg {
-    display: block;
-    fill: $text-color-accent;
-    transition: $transition-base;
-  }
 }
 
 body {
