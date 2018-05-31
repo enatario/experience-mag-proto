@@ -48,6 +48,14 @@ hr {
 }
 
 .pubdate {
-  font-family: $font-family-sans;
+  font-style: italic;
   text-align: center;
+
+  &::before {
+    border-top: 2px solid $bg-color-tertiary;
+    content: "";
+    display: block;
+    margin: $spacing-base auto;
+    width: $spacing-xx-large;
+  }
 }
