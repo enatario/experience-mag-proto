@@ -1,38 +1,25 @@
 .site-footer {
   background-color: $bg-color-secondary;
+  font-family: $font-family-sans;
   padding: $spacing-base;
-}
+  margin-top: $spacing-xx-large * 2;
 
-.site-footer__divider {
-  margin: $spacing-base auto;
-  max-width: $width-medium;
-  width: 100%;
-}
-
-.site-footer__inner {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: $spacing-large auto $spacing-medium;
-  max-width: $width-medium;
-
-  @include breakpoint("small") {
-    flex-direction: row;
-  }
-
-  > * {
-    &:not(:last-child) {
-      margin-bottom: $spacing-base;
-    }
-  }
-
-  h2 {
+  svg {
     margin-bottom: $spacing-base;
   }
 }
 
-.site-footer__inner--meta {
+.site-footer__inner {
   align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: $spacing-large auto $spacing-medium;
+  max-width: $width-base;
+
+  @include breakpoint("small") {
+    flex-direction: row;
+  }
 }
 
 .site-footer__social {
@@ -50,6 +37,7 @@
   }
 
   a {
+
     &:hover {
       svg {
         fill: $text-color-base;
@@ -58,29 +46,41 @@
   }
 }
 
-.site-footer__about {
 
-  @include breakpoint("small") {
-    padding-right: $spacing-x-large;
-  }
+.site-footer__bottom {
+  background-color: $color-offblack;
+  box-shadow: 0 0 0 $spacing-base $color-offblack;
+  color: $text-color-inverse;
+  margin-top: $spacing-x-large;
+  text-align: center;
 
-  p {
-    @include breakpoint("small") {
-      column-count: 2;
-      column-gap: $spacing-base;
+  a {
+    color: $text-color-inverse;
+
+    &:hover {
+      color: $text-color-accent;
     }
   }
 }
 
+.site-footer__nav {
+  width: 100%;
+  text-align: center;
+}
+
 .site-footer__nav-list {
-  font-family: $font-family-sans;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: $width-base;
   font-weight: $font-weight-bold;
 
-  a {
-    color: $text-color-accent;
+  @include breakpoint("small") {
+    flex-direction: row;
+  }
 
-    &:hover {
-      color: $text-color-base;
-    }
+  li {
+    margin-bottom: $spacing-base;
   }
 }
