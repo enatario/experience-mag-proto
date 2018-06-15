@@ -6,7 +6,7 @@
 
   <article class="article">
     {{> modules/hero type="fullscreen" byline=true overline="First Person" overline-link=true img="pl-1" }}
-    <button class="btn--secondary" data-article-toggle-btn="article-title-1">Read story</button>
+    <button type="button" class="btn--secondary" data-article-toggle-btn="article-title-1">Read story</button>
     <div hidden data-article-toggle-content="article-title-1">
       {{> modules/article-text-content }}
     </div>
@@ -14,7 +14,7 @@
 
   <article class="article">
     {{> modules/hero type="fullscreen" byline=true overline="Ideas" overline-link=true headline="60 minutes. 150 meals. Go!" img="pl-2"}}
-    <button class="btn--secondary" data-article-toggle-btn="article-title-2">Read story</button>
+    <button type="button" class="btn--secondary" data-article-toggle-btn="article-title-2">Read story</button>
     <div hidden data-article-toggle-content="article-title-2">
       {{> modules/article-text-content }}
     </div>
@@ -22,7 +22,7 @@
 
   <article class="article">
     {{> modules/hero type="fullscreen" byline=true overline="In the news" overline-link=true headline="Finding life and meaning after the war is over" img="pl-3"}}
-    <button class="btn--secondary" data-article-toggle-btn="article-title-3">Read story</button>
+    <button type="button" class="btn--secondary" data-article-toggle-btn="article-title-3">Read story</button>
     <div hidden data-article-toggle-content="article-title-3">
       {{> modules/article-text-content }}
     </div>
@@ -36,7 +36,7 @@
     </section>
 
   <div class="playlist-nav" data-playlist-nav hidden>
-    <button data-article-toggle-all class="playlist-nav__btn playlist-is-collapsed btn--secondary">Playlist: Show All 3 stories about Reinvention</button>
+    <button type="button" data-article-toggle-all class="playlist-nav__btn playlist-is-collapsed btn--secondary">Playlist: Show All 3 stories about Reinvention</button>
   </div>
 
 {{/layout}}

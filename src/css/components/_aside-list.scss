@@ -1,0 +1,41 @@
+.aside-list {
+  border: 2px solid $bg-color-secondary;
+  padding: $spacing-base;
+  margin: $spacing-base 0;
+  text-align: center;
+}
+
+.aside-list__btn {
+  margin: $spacing-base 0;
+
+  .aside-list.is-open & {
+    display: none;
+  }
+}
+
+.aside-list__hed {
+  margin-bottom: $spacing-base;
+}
+
+.aside-list__content {
+  text-align: left;
+}
+
+.aside-list__item {
+  &:not(:last-child) {
+    margin-bottom: $spacing-base;
+  }
+
+  &:not(:first-child) {
+    display: none;
+
+    .aside-list.is-open & {
+      display: list-item;
+    }
+  }
+}
+
+.aside-list__subhed {
+  font-family: $font-family-sans;
+  font-weight: $font-weight-bold;
+}
