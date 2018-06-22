@@ -5,9 +5,11 @@ const asideBtn = select("[data-btn-aside-list]")
 
 const revealList = () => {
   
-  asideBtn.addEventListener("click", () => {
-    addClass(asideList, "is-open")
-  })
+  if (asideBtn) {
+    asideBtn.addEventListener("click", () => {
+      addClass(asideList, "is-open")
+    })
+  }
 }
 
 export default revealList
